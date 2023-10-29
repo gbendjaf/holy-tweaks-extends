@@ -1,0 +1,113 @@
+/* --- RAW --- */
+
+/* COLORS VARIABLES */
+
+$accent-blue: #B390FF;
+$accent-green: #FFED90;
+$accent-pink: #FF9090;
+$accent-sage: #90FFE4;
+
+$black-80: #000000CC;
+
+$alpha-white-60: rgb(255, 255, 255, 60%);
+$alpha-white-40: rgb(255, 255, 255, 40%);
+$alpha-white-15: rgb(255, 255, 255, 15%);
+$alpha-white-8: rgb(255, 255, 255, 8%);
+$alpha-white-4: rgb(255, 255, 255, 4%);
+$alpha-white-0: #FFFFFF;
+
+$grey-100: #FFFFFF;
+$grey-95: #F4ECF0;
+$grey-80: #C3BBBF;
+$grey-60: #857E82;
+$grey-40: #4C4649;
+$grey-30: #312C2F;
+$grey-28: #2C272A;
+$grey-25: #252023;
+$grey-20: #191417;
+$grey-15: #0E0A0C;
+
+$red-70: #FE6555;
+$red-60: #F00307;
+$red-50: #BB0908;
+$red-40: #8B0202;
+$red-30: #5C0101;
+
+$purple-70: #8693FE;
+$purple-60: #6871E5;
+$purple-50: #4C2EF9;
+$purple-40: #3629AF;
+$purple-30: #222169;
+
+$orange-70: #FD6B00;
+$orange-60: #CE5703;
+$orange-50: #A14202;
+$orange-40: #762F02;
+$orange-30: #4F1C00;
+
+$yellow-80: #EBB505;
+$yellow-70: #C59701;
+$yellow-60: #A07A03;
+$yellow-50: #7C5E07;
+$yellow-40: #5B4402;
+$yellow-30: #3B2B01;
+
+$error-70: #FE6749;
+$error-50: #B92501;
+$error-20: #2E0501;
+
+$success70: #11BD60;
+
+$warning-70: #F17802;
+
+$info-70: #3CA9DD;
+
+$gradient: linear-gradient(180deg, rgba(25, 20, 23, 0.50) 0%, rgba(25, 20, 23, 0.70) 100%);
+
+/* TOKENS */
+
+$bg-action: $purple-50;
+$bg-page: $grey-15;
+$bg-section: $grey-20;
+$bg-active-hi: $purple-50;
+$bg-active-low: $grey-25;
+$bg-brand: $purple-50;
+$bg-hover-hi: $purple-50;
+$bg-hover-low: $alpha-white-4;
+$bg-hoveractive-hi: $purple-40;
+$bg-none: $alpha-white-0;
+$bg-overlay-hi: $black-80;
+$bg-disabled: $alpha-white-8;
+$bg-overlap: $grey-30;
+$bg-error: $error-20;
+$bg-static: $grey-40;
+
+$text-onaction: $grey-100;
+$text-action: $grey-95;
+$text-active: $grey-100;
+$text-title: $grey-100;
+$text-onbrand: $grey-100;
+$text-body: $grey-95;
+$text-caption: $grey-80;
+$text-onhover: $grey-100;
+$text-error: $error-70;
+$text-warning: $warning-70;
+$text-success: $success70;
+$text-brand: $purple-50;
+$text-disabled: $grey-60;
+
+$border-action-hi: $grey-100;
+$border-action-low: $grey-28;
+$border-neutral: $grey-28;
+$border-brand: $purple-50;
+$border-neutral-hi: $grey-25;
+$border-active-hi: $grey-100;
+$border-active-low: $grey-80;
+$border-error: $error-50;
+$border-disabled: $grey-40;
+
+$brand-max: $purple-70;
+$brand-hi: $purple-60;
+$brand-mid: $purple-50;
+$brand-low: $purple-40;
+$brand-min: $purple-30;
