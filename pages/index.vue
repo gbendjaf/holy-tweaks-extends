@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 
 const inputText = ref('')
+const inputTextDisabled = ref(`I'm dissabled !`)
 </script>
 
 <template>
@@ -13,7 +14,9 @@ const inputText = ref('')
         placeholder="Exemple de fou"
       />
       <InputText
+        v-model="inputTextDisabled"
         placeholder="Mot de passe"
+        :disabled="true"
       />
     </div>
   </main>
