@@ -72,12 +72,12 @@ $input-height: 45px;
   @include action-large;
   border-radius: 2px;
   background-color: transparent;
-  border: 2px solid $border-action-low;
-  transition: border ease 0.2s;
+  border: 1px solid $border-action-low;
   color: $text-active;
   padding: 8px 8px 8px 16px;
   &:focus {
     border-color: $grey-100;
+    border-width: 2px;
   }
   &:focus ~ label:before,
   &:focus ~ label:after {
@@ -98,28 +98,26 @@ $input-height: 45px;
   position: absolute;
   top: 0;
   color: $text-caption;
-  transition: all ease 0.2s, background 3s;
+  transition: all ease 0.2s;
   background-color: transparent;
   pointer-events: none;
   display: flex;
   white-space: nowrap;
   &:before {
     content: '';
-    border-top: 2px solid $border-action-low;
+    border-top: 1px solid $border-action-low;
     border-top-left-radius: 2px;
     min-width: 13px;
     height: 1px;
     display: block;
     margin-right: 5px;
-    transition: border ease 0.2s;
   }
   &:after {
     content: '';
     width: 100%;
-    border-top: 2px solid $border-action-low;
+    border-top: 1px solid $border-action-low;
     border-top-right-radius: 2px;
     margin-left: 5px;
-    transition: border ease 0.2s;
   }
 }
 .ht-c-input:focus,
@@ -131,15 +129,25 @@ $input-height: 45px;
     line-height: 1px;
     color: $text-body;
   }
+  & ~ label:before,
+  & ~ label:after {
+    border-width: 2px;
+  }
 }
 .ht-c-input:disabled {
   pointer-events: none;
   background-color: $bg-disabled;
-  border: 1px solid $border-disabled;
+  border-left-color: $border-disabled;
+  border-bottom-color: $border-disabled;
+  border-right-color: $border-disabled;
   color: $text-disabled;
   & ~ label {
     color: $text-disabled;
-    background: linear-gradient(to bottom, transparent 50%, #211D1F 50%); 
+  }
+  & ~ label:before,
+  & ~ label:after {
+    border-width: 1px;
+    border-color: $border-disabled;
   }
 }
 .ht-c-input.--error {

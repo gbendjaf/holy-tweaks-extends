@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@/assets/styling/typography/fonts.css',
+    '@/assets/styling/typography/base.scss',
     '@/assets/styling/settings/normalize.scss',
     '@/assets/styling/settings/global.scss',
   ]

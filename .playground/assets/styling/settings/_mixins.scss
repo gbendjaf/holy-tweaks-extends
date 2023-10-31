@@ -1,29 +1,25 @@
-
 /* HEADING */
 
 @mixin heading-large {
   font-family: Lexend;
-  font-size: 60px;
+  font-size: 55px;
   font-style: normal;
   font-weight: 700;
-  line-height: 69px;
   letter-spacing: -1px;
 }
 
 @mixin heading-medium {
   font-family: Lexend;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px;
   letter-spacing: -1px;
 }
 @mixin heading-small {
   font-family: Lexend;
-  font-size: 16px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px;
   letter-spacing: -0.8px;
 }
 

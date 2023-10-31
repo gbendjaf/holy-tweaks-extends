@@ -1,0 +1,25 @@
+a, p, label, h1, h2, h3 {
+  color: $text-body;
+}
+
+h1 {
+  @include heading-medium;
+  color: $text-title;
+  @media only screen and (min-width: 768px) {
+    @include heading-large;
+  }
+}
+
+h2 {
+  color: $text-title;
+  @include heading-medium;
+}
+
+h3 {
+  color: $text-title;
+  @include heading-small;
+}
+
+p {
+
+}
