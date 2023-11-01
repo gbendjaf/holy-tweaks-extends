@@ -53,6 +53,12 @@ function login () {
         >
           Free vbucks
         </NavigationExternalLink>
+        <NavigationExternalLink
+          to="https://youtu.be/dQw4w9WgXcQ"
+          :with-icon="false"
+        >
+          Free vbucks
+        </NavigationExternalLink>
         <ButtonPrimary />
         <ButtonPrimary type="large"/>
         <ButtonSecondary />
@@ -73,7 +79,7 @@ function login () {
   max-width: 700px;
 }
 .ht-c-other-section {
-  max-width: 800px;
+  max-width: 500px;
 }
 .ht-c-input-submit {
   align-self: flex-end;
@@ -81,8 +87,9 @@ function login () {
 .ht-l-flex-gap {
   display: flex;
   gap: 10px;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 main {
   display: flex;
