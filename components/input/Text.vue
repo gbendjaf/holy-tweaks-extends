@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { Component } from  'vue'
 
-export interface Props {
+interface Props {
   modelValue: string,
   placeholder: string,
   error?: boolean,
   disabled?: boolean,
   type?: 'text' | 'password' | 'email',
-  icon?: Component,
+  icon?: any,
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -69,7 +68,7 @@ $input-height: 45px;
   outline: none;
   width: 100%;
   height: 100%;
-  @include action-large;
+  @include action-medium;
   border-radius: 2px;
   background-color: transparent;
   border: 1px solid $border-action-low;

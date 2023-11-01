@@ -2,10 +2,16 @@
 import { resolveComponent } from 'vue'
 import { ref } from 'vue'
 
-const EyeIcon = resolveComponent('IconEyeBold')
+const IconEye = resolveComponent('IconEyeBold')
+const IconEyeSlashed = resolveComponent('IconEyeSlashBold')
 
 const inputText = ref('')
 const inputTextDisabled = ref(`mario-bros-123`)
+const passwordMode = ref(true)
+
+function login () {
+  console.log('login tentative !')
+}
 </script>
 
 <template>
@@ -17,9 +23,10 @@ const inputTextDisabled = ref(`mario-bros-123`)
     <hr>
     <section class="ht-c-form-section">
       <h2>Here is a form</h2>
-      <form>
-        <h3>Connecte-toi</h3>
+      <form @submit.prevent="login">
+        <h3>Fake login</h3>
         <InputText
+          class="ht-c-inputs"
           v-model="inputText"
           placeholder="Email"
           type="email"
@@ -27,15 +34,56 @@ const inputTextDisabled = ref(`mario-bros-123`)
         <InputText
           v-model="inputTextDisabled"
           placeholder="Mot de passe"
-          type="password"
-          :icon="EyeIcon"
+          :type="passwordMode ? 'password' : 'text'"
+          :icon="passwordMode ? IconEyeSlashed : IconEye"
+          @icon-clicked="passwordMode = !passwordMode"
+        />
+        <InputSubmit
+          class="ht-c-input-submit"
+          text="Me connecter"
+          type="large"
         />
       </form>
+    </section>
+    <section class="ht-c-other-section">
+      <h2>Some other components</h2>
+      <div class="ht-l-flex-gap">
+        <NavigationExternalLink
+          to="https://youtu.be/dQw4w9WgXcQ"
+        >
+          Free vbucks
+        </NavigationExternalLink>
+        <ButtonPrimary />
+        <ButtonPrimary type="large"/>
+        <ButtonSecondary />
+        <ButtonSecondary type="large" />
+      </div>
+    </section>
+    <section class="ht-c-nav-menu-section">
+      <h2>A nav menu</h2>
     </section>
   </main>
 </template>
 
 <style scope lang="scss">
+.ht-c-form-section {
+  max-width: 500px;
+}
+.ht-c-nav-menu-section {
+  max-width: 700px;
+}
+.ht-c-other-section {
+  max-width: 800px;
+}
+.ht-c-input-submit {
+  align-self: flex-end;
+}
+.ht-l-flex-gap {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
 main {
   display: flex;
   flex-direction: column;
@@ -43,7 +91,7 @@ main {
   gap: 50px;
   padding: 20px;
 }
-.ht-c-form-section {
+section {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -60,8 +108,9 @@ hr {
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 10px;
+  gap: 40px;
+  padding: 20px;
   border: 2px solid $border-neutral;
+  background-color: $bg-section;
 }
 </style>
