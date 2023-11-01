@@ -2,12 +2,12 @@
 import type { RouteLocationRaw } from '#vue-router'
 
 interface Props {
- icon: boolean,
- to: RouteLocationRaw,
+  withIcon?: boolean,
+  to: RouteLocationRaw,
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  icon: true,
+  withIcon: true,
 })
 </script>
 
@@ -19,7 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
     <slot>
       External Link
     </slot>
-    <IconArrowUpRightLinear />
+    <IconArrowUpRightLinear v-if="withIcon"/>
   </NuxtLink>
 </template>
 
