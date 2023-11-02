@@ -1,45 +1,73 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 interface Props {
   modelValue: string,
   label: string,
   error?: boolean,
+  newPassword?: boolean,
   disabled?: boolean,
-  type?: 'text' | 'email',
+  withIcon?: boolean,
   required?: boolean,
-  autocomplete: string,
+  pattern?: string,
+  maxlength?: number,
 }
 
 const props = withDefaults(defineProps<Props>(), {
   disabled: false,
-  type: 'text',
-  error: false,
+  withIcon: true,
   required: false,
-  autocomplete: 'nope'
+  newPassword: false,
+  pattern: `^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^a-zA-Z\\d]).{9,}$`,
+  maxlength: 100
 })
 
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void
+  (e: 'iconClicked'): void
 }>()
+
+const IconEyeBold = resolveComponent('IconEyeBold')
+const IconEyeSlashed = resolveComponent('IconEyeSlashBold')
+
+const isInputFocused = ref<boolean>(false)
+const passwordMode = ref<'password' | 'text'>('password')
 
 // Emited each time input value change
 function emitChange (event: Event): void {
   emit('update:modelValue', (event.target as HTMLInputElement).value)
 }
+
+function changePasswordMode () {
+  passwordMode.value = passwordMode.value === 'password' ? 'text' : 'password'
+}
 </script>
 
 <template>
   <div class="ht-l-input-container">
+    <component
+      v-if="withIcon"
+      class="ht-c-input__icon"
+      :class="{ '--is-active': isInputFocused || modelValue !== '' }"
+      :is="passwordMode === 'password' ? IconEyeSlashed : IconEyeBold"
+      @click.stop="changePasswordMode"
+      @hover.stop.prevent
+    />
     <input
       class="ht-c-input ht-c-input-text"
-      :class="{ '--error': error }"
-      :type="type"
-      :autocomplete="autocomplete"
-      :value="modelValue"
+      :class="{ '--error': error, '--icon': withIcon }"
+      :type="passwordMode"
+      :autocomplete="newPassword ? 'new-password' : 'password'"
       :disabled="disabled"
+      :value="modelValue"
       :required="required"
-      placeholder=""
+      :pattern="pattern"
+      :maxlength="maxlength"
       spellcheck="false"
+      placeholder=""
       @input="emitChange($event)"
+      @focus="isInputFocused = true"
+      @blur="isInputFocused = false"
     >
     <label>{{ label }}</label>
   </div>
@@ -74,6 +102,9 @@ $input-height: 45px;
   }
   &:hover:not(:focus) {
     background-color: $bg-hover-low;
+  }
+  &.--icon {
+    padding-right: 48px;
   }
 }
 .ht-c-input ~ label {
@@ -140,6 +171,23 @@ $input-height: 45px;
   border: 1px solid $border-error ;
   & ~ label {
     color: $text-error;
+  }
+}
+.ht-c-input__icon {
+  height: 48px;
+  width: 48px;
+  padding: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  color: $text-caption;
+  &:hover ~ input:not(:focus) {
+    background-color: $bg-hover-low;
+  }
+  &.--is-active {
+    color: $text-body;
   }
 }
 // Prevent autofill from messing up styling

@@ -2,12 +2,8 @@
 import { resolveComponent } from 'vue'
 import { ref } from 'vue'
 
-const IconEye = resolveComponent('IconEyeBold')
-const IconEyeSlashed = resolveComponent('IconEyeSlashBold')
-
 const inputText = ref('')
-const inputTextDisabled = ref(`mario-bros-123`)
-const passwordMode = ref(true)
+const inputTextDisabled = ref(``)
 
 function login () {
   console.log('login tentative !')
@@ -28,15 +24,18 @@ function login () {
         <InputText
           class="ht-c-inputs"
           v-model="inputText"
-          placeholder="Email"
+          label="Email"
           type="email"
+          autocomplete="email"
+          required
         />
-        <InputText
+        <InputPassword
           v-model="inputTextDisabled"
-          placeholder="Mot de passe"
-          :type="passwordMode ? 'password' : 'text'"
-          :icon="passwordMode ? IconEyeSlashed : IconEye"
-          @icon-clicked="passwordMode = !passwordMode"
+          label="Mot de passe"
+          required
+        />
+        <InputTextArea
+          placeholder="Tell us about you"
         />
         <InputSubmit
           class="ht-c-input-submit"

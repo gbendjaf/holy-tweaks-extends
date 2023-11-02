@@ -1,12 +1,14 @@
 <script setup lang="ts">
 interface Props {
   text: string,
-  type?: 'regular' | 'large'
+  disabled?: boolean,
+  type?: 'regular' | 'large',
 }
 
 const props = withDefaults(defineProps<Props>(), {
   text: 'Input submit',
-  type: 'regular'
+  type: 'regular',
+  disabled: false
 })
 </script>
 
@@ -15,6 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
     :class="{ '--large': type === 'large' }"
     type="submit"
     :value="text"
+    :disabled="disabled"
   >
 </template>
 
