@@ -4,6 +4,7 @@ import { ref } from 'vue'
 
 const inputText = ref('')
 const inputTextDisabled = ref(``)
+const inputCheckBox = ref(false)
 
 function login () {
   console.log('login tentative !')
@@ -21,6 +22,7 @@ function login () {
       <h2>Here is a form</h2>
       <form @submit.prevent="login">
         <h3>Fake login</h3>
+				<p>Enter your credentials please</p>
         <InputText
           class="ht-c-inputs"
           v-model="inputText"
@@ -37,11 +39,16 @@ function login () {
         <InputTextArea
           placeholder="Tell us about you"
         />
-        <InputSubmit
-          class="ht-c-input-submit"
-          text="Me connecter"
-          type="large"
-        />
+				<div>
+					<InputCheckBox
+						v-model="inputCheckBox"
+					/>
+					<InputSubmit
+						class="ht-c-input-submit"
+						text="Me connecter"
+						type="large"
+					/>
+				</div>
       </form>
     </section>
     <section class="ht-c-other-section">
@@ -96,6 +103,7 @@ main {
   align-items: center;
   gap: 50px;
   padding: 20px;
+	background-color: $bg-page;
 }
 section {
   display: flex;
