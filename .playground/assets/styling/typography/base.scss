@@ -20,6 +20,6 @@ h3 {
   @include heading-small;
 }
 
-p {
+p, label {
   @include body-regular;
 }

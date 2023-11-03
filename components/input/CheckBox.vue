@@ -1,7 +1,12 @@
 <script setup lang="ts">
-defineProps<{
-  modelValue: boolean
-}>()
+interface Props {
+  modelValue: boolean,
+  label?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  label: 'Default label'
+})
 
 defineEmits<{
   (e: 'update:modelValue', value: boolean): void
@@ -18,6 +23,7 @@ defineEmits<{
       @input="$emit('update:modelValue', !modelValue)"
     >
     <IconCheckLinear v-if="modelValue" />
+    <label>{{ label }}</label>
   </div>
 </template>
 
@@ -26,6 +32,9 @@ defineEmits<{
   position: relative;
   width: fit-content;
   height: fit-content;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 .ht-c-input-checkbox {
   accent-color: $bg-active-hi;

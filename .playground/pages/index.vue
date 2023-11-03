@@ -39,9 +39,10 @@ function login () {
         <InputTextArea
           placeholder="Tell us about you"
         />
-				<div>
+				<div class="ht-c-form__validation">
 					<InputCheckBox
 						v-model="inputCheckBox"
+            label="Long conditions asking for user agreement upon selling his sould or something similar"
 					/>
 					<InputSubmit
 						class="ht-c-input-submit"
@@ -96,6 +97,12 @@ function login () {
   justify-content: space-around;
   align-items: baseline;
   flex-wrap: wrap;
+}
+.ht-c-form__validation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
 main {
   display: flex;
