@@ -54,7 +54,7 @@ function changePasswordMode () {
       @hover.stop.prevent
     />
     <input
-      class="ht-c-input ht-c-input-text"
+      class="ht-c-input"
       :class="{ '--error': error, '--icon': withIcon }"
       :type="passwordMode"
       :autocomplete="newPassword ? 'new-password' : 'password'"

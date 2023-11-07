@@ -2,11 +2,13 @@
 interface Props {
   modelValue: boolean,
   disabled?: boolean,
-  label?: string
+  label?: string,
+  required?: boolean,
 }
 
 const props = withDefaults(defineProps<Props>(), {
   disabled: false,
+  required: false,
 })
 
 const emits = defineEmits<{
@@ -28,6 +30,7 @@ const emits = defineEmits<{
       :value="modelValue"
       :checked="modelValue"
       :disabled="disabled"
+      :required="required"
       @input="$emit('update:modelValue', !modelValue)"
     >
     <span class="ht-c-checkmark">

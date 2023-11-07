@@ -7,6 +7,7 @@ interface Props {
   type?: 'text' | 'email',
   required?: boolean,
   autocomplete: string,
+  maxlength?: number
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -14,7 +15,8 @@ const props = withDefaults(defineProps<Props>(), {
   type: 'text',
   error: false,
   required: false,
-  autocomplete: 'nope'
+  autocomplete: 'nope',
+  maxlength: 100
 })
 
 const emit = defineEmits<{
@@ -30,13 +32,14 @@ function emitChange (event: Event): void {
 <template>
   <div class="ht-l-input-container">
     <input
-      class="ht-c-input ht-c-input-text"
+      class="ht-c-input"
       :class="{ '--error': error }"
       :type="type"
       :autocomplete="autocomplete"
       :value="modelValue"
       :disabled="disabled"
       :required="required"
+      :maxlength="maxlength"
       placeholder=""
       spellcheck="false"
       @input="emitChange($event)"
@@ -55,10 +58,10 @@ $input-height: 45px;
   height: $input-height;
 }
 .ht-c-input {
+  @include action-medium;
   outline: none;
   width: 100%;
   height: 100%;
-  @include action-medium;
   border-radius: 2px;
   background-color: transparent;
   border: 1px solid $border-action-low;

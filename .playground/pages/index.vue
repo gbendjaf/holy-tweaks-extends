@@ -37,13 +37,13 @@ function login () {
           required
         />
         <InputTextArea
-          placeholder="Tell us about you"
+          label="Tell us about you"
         />
 				<div class="ht-c-form__validation">
 					<InputCheckBox
 						v-model="inputCheckBox"
             label="Ask for user approval"
-            
+            required
 					/>
 					<InputSubmit
 						class="ht-c-input-submit"
