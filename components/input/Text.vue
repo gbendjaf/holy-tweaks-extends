@@ -66,7 +66,7 @@ $input-height: 45px;
   padding: 8px 8px 8px 16px;
   &:focus {
     border-color: $border-active-hi;
-    border-width: 2px;
+    border-width: 1px;
   }
   &:focus ~ label:before,
   &:focus ~ label:after {
@@ -117,7 +117,7 @@ $input-height: 45px;
   }
   & ~ label:before,
   & ~ label:after {
-    border-width: 2px;
+    border-width: 1px;
   }
 }
 .ht-c-input:disabled {

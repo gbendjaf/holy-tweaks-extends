@@ -19,12 +19,11 @@ const props = withDefaults(defineProps<Props>(), {
 <style scoped lang="scss">
 button {
   @include action-medium;
-  border: none;
   user-select: none;
   border-radius: 2px;
   padding: 8px;
   background-color: transparent;
-  outline: 1px solid $border-action-hi;
+  border: 1px solid $border-action-hi;
   cursor: pointer;
   color: $text-action;
   &.--large {
@@ -33,14 +32,14 @@ button {
   }
   &:disabled {
     color: $text-disabled;
-    outline: 1px solid $border-disabled;
+    border: 1px solid $border-disabled;
     cursor: default;
-  }
-  &:focus-visible {
-    outline-width: 2px;
   }
   &:not(:disabled):hover {
     background-color: $alpha-white-8;
-  } 
+  }
+  &:focus-visible {
+    outline: 1px solid $border-active-hi;
+  }
 }
 </style>

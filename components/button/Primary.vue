@@ -42,5 +42,8 @@ button {
     color: $text-disabled;
     cursor: default;
   }
+  &:focus-visible {
+    outline: 1px solid $border-active-hi;
+  }
 }
 </style>

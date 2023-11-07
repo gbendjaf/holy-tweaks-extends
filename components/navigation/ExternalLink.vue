@@ -31,6 +31,13 @@ a {
   width: fit-content;
   text-decoration-color: $text-brand;
   text-decoration-thickness: 2px;
+  &:focus-visible {
+    border: none;
+    outline: none;
+    & svg {
+      transform: translateX(7%) translateY(-7%);
+    }
+  }
 }
 svg {
   color: $text-brand;
