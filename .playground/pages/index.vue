@@ -4,7 +4,7 @@ import { ref } from 'vue'
 
 const inputText = ref('')
 const inputTextDisabled = ref(``)
-const inputCheckBox = ref(false)
+const inputCheckBox = ref(true)
 
 function login () {
   console.log('login tentative !')
@@ -42,7 +42,8 @@ function login () {
 				<div class="ht-c-form__validation">
 					<InputCheckBox
 						v-model="inputCheckBox"
-            label="Long conditions asking for user agreement upon selling his sould or something similar"
+            label="Ask for user approval"
+            
 					/>
 					<InputSubmit
 						class="ht-c-input-submit"

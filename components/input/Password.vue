@@ -93,12 +93,12 @@ $input-height: 45px;
   color: $text-active;
   padding: 8px 8px 8px 16px;
   &:focus {
-    border-color: $grey-100;
+    border-color: $border-active-hi;
     border-width: 2px;
   }
   &:focus ~ label:before,
   &:focus ~ label:after {
-    border-color: $grey-100;
+    border-color: $border-active-hi;
   }
   &:hover:not(:focus) {
     background-color: $bg-hover-low;

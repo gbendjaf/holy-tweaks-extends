@@ -36,7 +36,7 @@ button {
     outline: 1px solid $border-disabled;
     cursor: default;
   }
-  &:focus {
+  &:focus-visible {
     outline-width: 2px;
   }
   &:not(:disabled):hover {
