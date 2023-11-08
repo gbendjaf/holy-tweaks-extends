@@ -4,12 +4,14 @@ interface Props {
   error?: boolean,
   disabled?: boolean,
   required?: boolean,
+	maxlength?: number,
 }
 
 const props = withDefaults(defineProps<Props>(), {
   error: false,
   disabled: false,
   required: false,
+	maxlength: 300
 })
 </script>
 
@@ -18,9 +20,10 @@ const props = withDefaults(defineProps<Props>(), {
     <textarea
       class="ht-c-textarea"
       :class="{ '--error': error }"
-      placeholder=""
       :required="required"
       :disabled="disabled"
+			:maxlength="maxlength"
+      placeholder=""
     />
     <label>{{ label }}</label>
   </div>
@@ -30,14 +33,16 @@ const props = withDefaults(defineProps<Props>(), {
 .ht-l-textarea-container {
   position: relative;
   display: flex;
+	min-width: 200px;
   width: 100%;
-  min-width: 200px;
 }
 .ht-c-textarea {
-  @include action-medium;
+	@include action-medium;
   width: 100%;
+	min-height: 100px;
+	max-height: 600px;
   resize: vertical;
-  background-color: transparent;
+  background: $gradient;
   outline: none;
   border-radius: 2px;
   border: 1px solid $border-action-low;
