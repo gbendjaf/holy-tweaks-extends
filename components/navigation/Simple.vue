@@ -7,7 +7,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  openNewPage?: false
+  openNewPage: false
 })
 </script>
 
@@ -21,3 +21,13 @@ const props = withDefaults(defineProps<Props>(), {
     </slot>
   </NuxtLink>
 </template>
+
+<style scoped lang="scss">
+a {
+  @include action-large;
+  text-decoration: none;
+  &:hover {
+    color: $text-onhover;
+  }
+}
+</style>

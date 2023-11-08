@@ -11,13 +11,13 @@ h1 {
 }
 
 h2 {
-  color: $text-title;
   @include heading-medium;
+  color: $text-title;
 }
 
 h3 {
-  color: $text-title;
   @include heading-small;
+  color: $text-title;
 }
 
 p, label {

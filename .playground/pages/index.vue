@@ -75,6 +75,11 @@ function login () {
     </section>
     <section class="ht-c-nav-menu-section">
       <h2>A nav menu</h2>
+      <NavigationSimple
+        to="/contact"
+      >
+        Contact
+      </NavigationSimple>
     </section>
   </main>
 </template>
