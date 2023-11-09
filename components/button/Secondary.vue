@@ -23,6 +23,7 @@ button {
   border-radius: 2px;
   padding: 8px;
   background-color: transparent;
+  transition: background-color 0.1s ease;
   border: 1px solid $border-action-hi;
   cursor: pointer;
   color: $text-action;

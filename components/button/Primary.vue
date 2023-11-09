@@ -26,7 +26,7 @@ button {
   border-radius: 2px;
   padding: 8px;
   background-color: $bg-action;
-  transition: background-color 0.1s linear;
+  transition: background-color 0.1s ease;
   cursor: pointer;
   width: fit-content;
   color: $text-onaction;
