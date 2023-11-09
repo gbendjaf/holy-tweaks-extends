@@ -1,5 +1,6 @@
 <script setup lang="ts">
 interface Props {
+  modelValue: string,
   label: string,
   error?: boolean,
   disabled?: boolean,
@@ -13,6 +14,15 @@ const props = withDefaults(defineProps<Props>(), {
   required: false,
 	maxlength: 300
 })
+
+const emit = defineEmits<{
+  (e: 'update:modelValue', value: string): void
+}>()
+
+// Emited each time input value change
+function emitChange (event: Event): void {
+  emit('update:modelValue', (event.target as HTMLInputElement).value)
+}
 </script>
 
 <template>
@@ -23,7 +33,9 @@ const props = withDefaults(defineProps<Props>(), {
       :required="required"
       :disabled="disabled"
 			:maxlength="maxlength"
+      :value="modelValue"
       placeholder=""
+      @input="emitChange($event)"
     />
     <label>{{ label }}</label>
   </div>
@@ -42,7 +54,7 @@ const props = withDefaults(defineProps<Props>(), {
 	min-height: 100px;
 	max-height: 600px;
   resize: vertical;
-  background: $gradient;
+  background-color: transparent;
   outline: none;
   border-radius: 2px;
   border: 1px solid $border-action-low;
@@ -58,6 +70,20 @@ const props = withDefaults(defineProps<Props>(), {
   }
   &:hover:not(:focus) {
     background-color: $bg-hover-low;
+  }
+}
+.ht-c-textarea:disabled {
+  pointer-events: none;
+  background-color: $bg-disabled;
+  border-color: $border-disabled;
+  color: $text-disabled;
+  & ~ label {
+    color: $text-disabled;
+  }
+  & ~ label:before,
+  & ~ label:after {
+    border-width: 1px;
+    border-color: $border-disabled;
   }
 }
 .ht-c-textarea ~ label {
@@ -102,6 +128,9 @@ const props = withDefaults(defineProps<Props>(), {
   & ~ label:before,
   & ~ label:after {
     border-width: 1px;
+  }
+  &:disabled {
+    border-top-color: transparent;
   }
 }
 </style>

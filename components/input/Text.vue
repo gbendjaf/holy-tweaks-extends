@@ -122,13 +122,14 @@ $input-height: 45px;
   & ~ label:after {
     border-width: 1px;
   }
+  &:disabled {
+    border-top-color: transparent;
+  }
 }
 .ht-c-input:disabled {
   pointer-events: none;
   background-color: $bg-disabled;
-  border-left-color: $border-disabled;
-  border-bottom-color: $border-disabled;
-  border-right-color: $border-disabled;
+  border-color: $border-disabled;
   color: $text-disabled;
   & ~ label {
     color: $text-disabled;

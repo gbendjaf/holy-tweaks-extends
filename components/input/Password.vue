@@ -48,9 +48,9 @@ function changePasswordMode () {
     <component
       v-if="withIcon"
       class="ht-c-input__icon"
-      :class="{ '--is-active': isInputFocused || modelValue !== '' }"
+      :class="{ '--is-active': isInputFocused || modelValue !== '', '--disabled': disabled }"
       :is="passwordMode === 'password' ? IconEyeSlashed : IconEyeBold"
-      @click.stop="changePasswordMode"
+      @click.stop="disabled ? undefined : changePasswordMode()"
       @hover.stop.prevent
     />
     <input
@@ -150,14 +150,15 @@ $input-height: 45px;
   & ~ label:after {
     border-width: 1px;
   }
+  &:disabled {
+    border-top-color: transparent;
+  }
 }
 .ht-c-input:disabled {
   pointer-events: none;
   background-color: $bg-disabled;
-  border-left-color: $border-disabled;
-  border-bottom-color: $border-disabled;
-  border-right-color: $border-disabled;
   color: $text-disabled;
+  border-color: $border-disabled;
   & ~ label {
     color: $text-disabled;
   }
@@ -188,6 +189,9 @@ $input-height: 45px;
   }
   &.--is-active {
     color: $text-body;
+  }
+  &.--disabled {
+    pointer-events: none;
   }
 }
 // Prevent autofill from messing up styling
