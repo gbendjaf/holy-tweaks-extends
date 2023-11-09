@@ -27,7 +27,7 @@ a {
   @include action-large;
   text-decoration: none;
   &:hover {
-    color: $text-onhover;
+    color: $grey-60;
   }
 }
 </style>
