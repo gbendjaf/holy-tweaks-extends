@@ -346,3 +346,12 @@ template {
 [hidden] {
   display: none;
 }
+
+/**
+ * Remove margin and padding around list elements.
+ */
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}

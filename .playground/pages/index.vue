@@ -3,8 +3,22 @@ import { resolveComponent } from 'vue'
 import { ref } from 'vue'
 
 const inputText = ref('')
-const inputTextDisabled = ref(``)
+const inputPassword = ref(``)
+const textArea = ref(``)
 const inputCheckBox = ref(true)
+
+const subMenuRedirection = [
+{
+    to: '/about',
+    name: 'About',
+    icon: resolveComponent('IconInfoBold')
+  },
+  {
+    to: '/blog',
+    name: 'Blog',
+    icon: resolveComponent('IconLandscapeBold')
+  }
+]
 
 function login () {
   console.log('login tentative !')
@@ -32,12 +46,14 @@ function login () {
           required
         />
         <InputPassword
-          v-model="inputTextDisabled"
+          v-model="inputPassword"
           label="Mot de passe"
           required
         />
         <InputTextArea
+          v-model="textArea"
           label="Tell us about you"
+          required
         />
 				<div class="ht-c-form__validation">
 					<InputCheckBox
@@ -75,16 +91,22 @@ function login () {
     </section>
     <section class="ht-c-nav-menu-section">
       <h2>A nav menu</h2>
-      <NavigationSimple
-        to="/contact"
-      >
-        Contact
-      </NavigationSimple>
+      <div class="ht-l-flex-gap">
+        <NavigationSimple
+          to="/contact"
+        >
+          Contact
+        </NavigationSimple>
+        <NavigationSubMenu
+          title="Entreprise"
+          :routes="subMenuRedirection"
+        />
+      </div>
     </section>
   </main>
 </template>
 
-<style scope lang="scss">
+<style scoped lang="scss">
 .ht-c-form-section {
   max-width: 500px;
 }
@@ -115,8 +137,9 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding: 20px;
-	background-color: $bg-page;
+  padding: 20px 20px 200px 20px;
+	// background-color: $bg-page;
+  background-color: $grey-20;
 }
 section {
   display: flex;
@@ -138,6 +161,7 @@ form {
   gap: 40px;
   padding: 20px;
   border: 2px solid $border-neutral;
-  background-color: $bg-section;
+  background-color: $grey-15;
+  // background-color: pink;
 }
 </style>

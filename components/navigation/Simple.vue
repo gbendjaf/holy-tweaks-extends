@@ -26,6 +26,7 @@ const props = withDefaults(defineProps<Props>(), {
 a {
   @include action-large;
   text-decoration: none;
+  padding: 10px;
   &:hover {
     color: $grey-60;
   }
