@@ -29,7 +29,11 @@ function login () {
   <main>
     <section>
       <h1>Holy Tweaks Software Web theme.</h1>
-      <p>A Nuxt Layer to standardize brand accross brand domain.</p>
+      <p>
+        <b>A Nuxt Layer</b>
+        <br>
+        Standardize visual accross our brand domains.
+      </p>
     </section>
     <hr>
     <section class="ht-c-form-section">
@@ -138,7 +142,6 @@ main {
   align-items: center;
   gap: 50px;
   padding: 20px 20px 200px 20px;
-	// background-color: $bg-page;
   background-color: $grey-20;
 }
 section {

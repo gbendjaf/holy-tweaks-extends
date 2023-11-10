@@ -24,3 +24,8 @@ h3 {
 p, label {
   @include body-regular;
 }
+
+p b {
+  @include body-bold;
+  color: $grey-100;
+}
