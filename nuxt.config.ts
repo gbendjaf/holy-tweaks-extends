@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	runtimeConfig: {
+		public: {
+			MAIN_WEBSITE: 'https://www.holytweaks.com'
+		}
+	},
   devtools: { enabled: true },
   modules: ['@nuxtseo/module'],
   vite: {

@@ -2,12 +2,12 @@
 import type { RouteLocationRaw } from '#vue-router'
 
 interface Props {
-  routes?: Array<{
-    to: RouteLocationRaw,
+  title: string
+  routes: Array<{
+    to: RouteLocationRaw | string,
     name: string,
     icon?: any
   }>,
-  title: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -18,7 +18,10 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <div class="ht-c-submenu-navigation">
     <ul>
-      <li v-for="redirection in routes">
+      <li
+        v-for="redirection in routes"
+        :key="redirection.name"
+      >
         <NuxtLink :to="redirection.to">
           <component :is="redirection.icon" />
           {{ redirection.name }}

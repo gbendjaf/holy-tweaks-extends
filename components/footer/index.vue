@@ -1,12 +1,22 @@
+<script setup lang="ts">
+const runtimeConfig = useRuntimeConfig();
+</script>
+
 <template>
   <footer>
     <div class="ht-c-footer-brand">
       <NuxtLink
         class="ht-c-footer-brand__link"
+        :to="runtimeConfig.public.MAIN_WEBSITE"
       >
         <IconClipE />
         <p>Holy Tweaks Software</p>
       </NuxtLink>
+      <div>
+        <NuxtLink>
+          <IconDiscord />
+        </NuxtLink>
+      </div>
     </div>
   </footer>
 </template>
@@ -35,5 +45,8 @@ footer {
   p {
     color: $grey-95;
   }
+}
+a {
+	text-decoration: none;
 }
 </style>
