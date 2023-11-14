@@ -29,8 +29,9 @@ a {
   display: flex;
   align-items: flex-end;
   width: fit-content;
-  text-decoration-color: $text-brand;
+  text-decoration-color: $brand-mid;
   text-decoration-thickness: 2px;
+  text-decoration-line: underline;
   &:focus-visible {
     border: none;
     outline: none;

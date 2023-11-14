@@ -87,7 +87,6 @@ li {
     gap: 10px;
     border-radius: 2px;
     width: 100%;
-    text-decoration: none;
   }
   &:hover a,
   &:hover svg {

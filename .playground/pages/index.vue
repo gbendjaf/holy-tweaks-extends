@@ -142,7 +142,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding: 20px 20px 200px 20px;
+  padding: 68px 20px 200px 20px;
   background-color: $grey-20;
 }
 section {
