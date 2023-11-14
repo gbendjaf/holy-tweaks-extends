@@ -1,5 +1,5 @@
 <template>
-	<NuxtLayout name="subdomain">
+	<NuxtLayout>
     <NuxtPage />
 	</NuxtLayout>
 </template>
