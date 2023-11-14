@@ -5,13 +5,7 @@ const runtimeConfig = useRuntimeConfig()
 <template>
   <header>
     <nav class="ht-l-header-container">
-      <NuxtLink
-        class="ht-c-header-brand__link"
-        :to="(runtimeConfig.public.MAIN_WEBSITE as string)"
-      >
-        <IconClipE />
-        Holy Tweaks
-      </NuxtLink>
+      <HeaderBrandLink />
     </nav>
   </header>
 </template>
@@ -20,17 +14,6 @@ const runtimeConfig = useRuntimeConfig()
 .ht-l-header-container {
   max-width: 1250px;
   margin: 0 auto;
-}
-.ht-c-header-brand__link {
-  @include action-large;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  svg {
-    width: 25px;
-    height: 26px;
-  }
 }
 header {
   position: fixed;

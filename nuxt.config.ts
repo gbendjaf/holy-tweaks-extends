@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
-			MAIN_WEBSITE: 'https://www.holytweaks.com'
+			MAIN_WEBSITE: 'https://www.holytweaks.com',
+      CURRENT_SUBDOMAIN: 'subdomain',
 		}
 	},
   devtools: { enabled: true },
