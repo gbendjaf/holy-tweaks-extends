@@ -146,7 +146,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
 .ht-l-footer-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1300px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 .ht-c-footer-brand {

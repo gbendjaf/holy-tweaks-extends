@@ -18,7 +18,7 @@ const runtimeConfig = useRuntimeConfig()
 
 <style scoped lang="scss">
 .ht-l-header-container {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 .ht-c-header-brand__link {
