@@ -146,7 +146,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
 .ht-l-footer-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 .ht-c-footer-brand {
@@ -233,9 +233,6 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
 footer {
   padding: 50px 20px;
   background-color: $grey-20;
-  border-top: 1px solid $grey-30;
-}
-a {
-	text-decoration: none;
+  border-top: 1px solid $grey-40;
 }
 </style>
