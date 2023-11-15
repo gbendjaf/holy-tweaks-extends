@@ -9,5 +9,6 @@
 .ht-l-page {
   padding: 50px 60px;
   background-color: $grey-20;
+  min-height: 100vh;
 }
 </style>
