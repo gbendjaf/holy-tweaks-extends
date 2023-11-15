@@ -21,8 +21,11 @@ header {
   z-index: 1000;
   top: 0;
   border-bottom: 1px solid $grey-40;
-  padding: 0 20px;
+  padding: 0 24px;
   background-color: rgba($grey-20, 0.8);
   backdrop-filter: blur(10px);
+  @media only screen and (min-width: 768px) {
+    padding: 0 34px;
+  }
 }
 </style>

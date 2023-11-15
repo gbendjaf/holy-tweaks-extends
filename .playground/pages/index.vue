@@ -142,8 +142,11 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding: 68px 20px 200px 20px;
+  padding: 68px 24px 200px 24px;
   background-color: $grey-20;
+  @media only screen and (min-width: 768px) {
+    padding: 68px 34px 200px 34px;
+  }
 }
 section {
   display: flex;
