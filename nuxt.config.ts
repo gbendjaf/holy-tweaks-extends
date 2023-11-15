@@ -7,7 +7,41 @@ export default defineNuxtConfig({
 		}
 	},
   devtools: { enabled: true },
-  modules: ['@nuxtseo/module'],
+  modules: [
+    '@nuxtseo/module',
+    '@nuxtjs/i18n'
+  ],
+  i18n: {
+    baseUrl: 'https://www.holytweaks.com',
+    langDir: './lang',
+    locales: [
+      {
+        code: 'fr',
+        name: 'Français',
+        iso: 'fr-FR',
+        file: 'fr.json'
+      },
+      {
+        code: 'en',
+        name: 'English',
+        iso: 'en-GB',
+        file: 'en.json'
+      },
+    ],
+    strategy: 'prefix',
+    defaultLocale: 'fr',
+    lazy: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+      alwaysRedirect: true,
+    },
+    compilation: {
+      strictMessage: false, // can lead to XSS attack, we only use our own data so it's alright
+      escapeHtml: false // have to stay false, otherwise defeat the purpose of v-html
+    }
+  },
   vite: {
     css: {
       preprocessorOptions: {
