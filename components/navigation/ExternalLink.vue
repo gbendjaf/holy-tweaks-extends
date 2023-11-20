@@ -32,6 +32,7 @@ a {
   text-decoration-color: $brand-mid;
   text-decoration-thickness: 2px;
   text-decoration-line: underline;
+	cursor: pointer;
   &:focus-visible {
     border: none;
     outline: none;
