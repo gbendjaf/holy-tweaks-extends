@@ -11,6 +11,7 @@ interface Props {
   required?: boolean,
   pattern?: string,
   maxlength?: number,
+	title?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -19,7 +20,8 @@ const props = withDefaults(defineProps<Props>(), {
   required: false,
   newPassword: false,
   pattern: `^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^a-zA-Z\\d]).{9,}$`,
-  maxlength: 100
+  maxlength: 100,
+	title: 'Must contain at least : 1 uppercase, 1 lowercase, 1 special character and be 10 letters'
 })
 
 const emit = defineEmits<{
@@ -63,6 +65,7 @@ function changePasswordMode () {
       :required="required"
       :pattern="pattern"
       :maxlength="maxlength"
+      :title="title"
       spellcheck="false"
       placeholder=""
       @input="emitChange($event)"
