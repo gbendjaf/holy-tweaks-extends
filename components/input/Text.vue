@@ -80,7 +80,7 @@ $input-height: 45px;
   }
 }
 .ht-c-input ~ label {
-  @include action-medium;
+  @include action-large;
   line-height: $input-height;
   width: 100%;
   height: 100%;
