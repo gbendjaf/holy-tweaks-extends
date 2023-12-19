@@ -156,6 +156,9 @@ $input-height: 45px;
   &:disabled {
     border-top-color: transparent;
   }
+	&.--error {
+		border-top-color: transparent;
+	}
 }
 .ht-c-input:disabled {
   pointer-events: none;
@@ -175,6 +178,11 @@ $input-height: 45px;
   border: 1px solid $border-error ;
   & ~ label {
     color: $text-error;
+  }
+	& ~ label:before,
+  & ~ label:after {
+		border-width: 1px;
+		border-color: $border-error;
   }
 }
 .ht-c-input__icon {

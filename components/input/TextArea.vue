@@ -32,7 +32,7 @@ function emitChange (event: Event): void {
       :class="{ '--error': error }"
       :required="required"
       :disabled="disabled"
-			:maxlength="maxlength"
+      :maxlength="maxlength"
       :value="modelValue"
       placeholder=""
       @input="emitChange($event)"
@@ -131,6 +131,21 @@ function emitChange (event: Event): void {
   }
   &:disabled {
     border-top-color: transparent;
+  }
+  &.--error {
+		border-top-color: transparent;
+	}
+}
+
+.ht-c-textarea.--error {
+  border: 1px solid $border-error ;
+  & ~ label {
+    color: $text-error;
+  }
+	& ~ label:before,
+  & ~ label:after {
+		border-width: 1px;
+		border-color: $border-error;
   }
 }
 </style>
