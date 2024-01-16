@@ -4,6 +4,7 @@ export default defineNuxtConfig({
 		public: {
 			MAIN_WEBSITE: 'https://www.holytweaks.com',
       CURRENT_SUBDOMAIN: 'subdomain',
+      ERROR_REDIRECT: '/'
 		}
 	},
   devtools: { enabled: true },
