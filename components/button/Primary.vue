@@ -29,6 +29,7 @@ button {
   transition: background-color 0.1s ease;
   cursor: pointer;
   width: fit-content;
+  height: fit-content;
   color: $text-onaction;
   &:not(:disabled):hover {
     background-color: $purple-40;

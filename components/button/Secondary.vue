@@ -26,6 +26,8 @@ button {
   transition: background-color 0.1s ease;
   border: 1px solid $border-action-hi;
   cursor: pointer;
+  width: fit-content;
+  height: fit-content;
   color: $text-action;
   &.--large {
     @include action-large;
