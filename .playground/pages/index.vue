@@ -17,6 +17,10 @@ const subMenuRedirection = [
     to: '/blog',
     name: 'Blog',
     icon: resolveComponent('IconLandscapeBold')
+  },
+  {
+    to: '/somewhere',
+    name: 'Somewhere'
   }
 ]
 
