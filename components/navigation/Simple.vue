@@ -3,6 +3,8 @@ import type { RouteLocationRaw } from '#vue-router'
 
 interface Props {
   to: RouteLocationRaw,
+  icon?: any,
+  name: string,
   openNewPage?: boolean,
 }
 
@@ -16,17 +18,22 @@ const props = withDefaults(defineProps<Props>(), {
     :to="props.to"
     :target="openNewPage ? '_blank' : ''"
   >
-    <slot>
-      Simple nav
-    </slot>
+    <component :is="icon"/>
+    <p>{{ name }}</p>
   </NuxtLink>
 </template>
 
 <style scoped lang="scss">
 a {
-  @include action-large;
   padding: 10px;
-  &:hover {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  p {    
+    @include action-large;
+    line-height: 20px;
+  }
+  p:hover {
     color: $grey-60;
   }
 }

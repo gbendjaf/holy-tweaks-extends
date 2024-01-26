@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { resolveComponent } from 'vue'
 import { ref } from 'vue'
 
 const inputText = ref('')
@@ -102,9 +101,8 @@ function login () {
       <div class="ht-l-flex-gap">
         <NavigationSimple
           to="/contact"
-        >
-          Contact
-        </NavigationSimple>
+          name="Contact"
+        />
         <NavigationSubMenu
           title="Entreprise"
           :routes="subMenuRedirection"
