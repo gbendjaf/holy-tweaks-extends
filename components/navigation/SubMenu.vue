@@ -88,12 +88,14 @@ li {
     border-radius: 2px;
     width: 100%;
   }
-  &:hover a,
-  &:hover svg {
-    color: $text-body;
-  }
-  &:hover a {
-    background-color: $bg-hover-low;
+  @media only screen and (min-width: 1064px) {
+    &:hover a,
+    &:hover svg {
+      color: $text-body;
+    }
+    &:hover a {
+      background-color: $bg-hover-low;
+    }
   }
 }
 </style>
