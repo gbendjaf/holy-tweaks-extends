@@ -1,7 +1,6 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
   <path fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5 9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12 17.937 22.75 12 22.75 1.25 17.937 1.25 12Z" clip-rule="evenodd"/>
-  <path fill-rule="evenodd" d="M15.53 8.47a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 0 1-1.06-1.06l6-6a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd"/>
-  <path fill-rule="evenodd" d="M8.47 8.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M12 6.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5ZM7.25 10a4.75 4.75 0 1 1 9.5 0 4.75 4.75 0 0 1-9.5 0Zm4.47 7.75c-1.892 0-3.63.848-4.796 2.233a.75.75 0 0 1-1.148-.966 7.765 7.765 0 0 1 5.944-2.767h.56c2.345 0 4.5 1.052 5.944 2.767a.75.75 0 1 1-1.148.966 6.265 6.265 0 0 0-4.796-2.233h-.56Z" clip-rule="evenodd"/>
 </svg>
 </template>
