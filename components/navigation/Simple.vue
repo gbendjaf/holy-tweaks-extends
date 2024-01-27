@@ -33,13 +33,11 @@ a {
     @include action-large;
     line-height: 20px;
   }
-  // p:hover {
-  //   color: $grey-60;
-  // }
   @media only screen and (min-width: 1064px) {
-    &:hover p,
-    &:hover svg {
-      color: $grey-60;
+    &:not(.router-link-active):hover {
+      p, svg {
+        color: $grey-60;
+      }
     }
   }
 }
