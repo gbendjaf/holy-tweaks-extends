@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 	},
   devtools: { enabled: true },
   modules: [
-    '@nuxtseo/module',
+    '@nuxtjs/seo',
     '@nuxtjs/i18n'
   ],
   i18n: {
