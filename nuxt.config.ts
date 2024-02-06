@@ -12,6 +12,13 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxtjs/i18n'
   ],
+  app: {
+    head: {
+      templateParams: {
+        separator: '-'
+      }
+    }
+  },
   i18n: {
     baseUrl: 'https://www.holytweaks.com',
     langDir: './lang',
