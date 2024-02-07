@@ -19,8 +19,19 @@ export default defineNuxtConfig({
       }
     }
   },
+  site: {
+    url: process.env.NUXT_SITE_URL ?? 'https://www.holytweaks.com',
+    name: process.env.NUXT_SITE_NAME ?? 'domain',
+    description: process.env.NUXT_SITE_DESCRIPTION ?? 'A default site description',
+    defaultLocale: process.env.NUXT_SITE_DEFAULT_LOCALE ?? 'fr',
+    identity: {
+      type: process.env.NUXT_SITE_IDENTITY ?? 'Organization'
+    },
+    twitter: process.env.NUXT_SITE_TWITTER_TAG ?? '@HolyTweaks',
+    indexable: process.env.NUXT_SITE_INDEXABLE ?? true,
+  },
   i18n: {
-    baseUrl: 'https://www.holytweaks.com',
+    baseUrl: process.env.NUXT_SITE_URL ?? 'https://www.holytweaks.com',
     langDir: './lang',
     locales: [
       {
