@@ -1,10 +1,13 @@
 <script setup lang="ts">
 interface Props {
-  type?: 'regular' | 'large'
+  type?: 'medium' | 'large',
+	text: string,
+	icon?: any
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  type: 'regular'
+  type: 'medium',
+	icon: null
 })
 </script>
 
@@ -12,15 +15,13 @@ const props = withDefaults(defineProps<Props>(), {
   <button
     :class="{ '--large': type === 'large' }"
   >
-    <slot>
-      Primary btn
-    </slot>
+    <component :is="icon" />
+    <p>{{ text }}</p>
   </button>
 </template>
 
 <style scoped lang="scss">
 button {
-  @include action-medium;
   border: none;
   user-select: none;
   border-radius: 2px;
@@ -30,7 +31,14 @@ button {
   cursor: pointer;
   width: fit-content;
   height: fit-content;
-  color: $text-onaction;
+  p {
+    @include action-medium;
+    color: $text-onaction;
+  }
+  svg {
+    height: 20px;
+    width: 20px;
+  }
   &:not(:disabled):hover {
     background-color: $purple-40;
   }
