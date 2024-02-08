@@ -2,12 +2,12 @@
 interface Props {
   text: string,
   disabled?: boolean,
-  type?: 'regular' | 'large',
+  type?: 'medium' | 'large',
 }
 
 const props = withDefaults(defineProps<Props>(), {
   text: 'Input submit',
-  type: 'regular',
+  type: 'medium',
   disabled: false
 })
 </script>
