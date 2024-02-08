@@ -26,10 +26,10 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style scoped lang="scss">
 a {
-  padding: 10px;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   p {    
     @include action-large;
     line-height: 20px;

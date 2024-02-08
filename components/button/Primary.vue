@@ -24,11 +24,11 @@ const props = withDefaults(defineProps<Props>(), {
 button {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   border: none;
   user-select: none;
   border-radius: 2px;
-  padding: 8px;
+  padding: 8px 12px;
   background-color: $bg-action;
   transition: background-color 0.1s ease;
   cursor: pointer;
