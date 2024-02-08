@@ -1,24 +1,28 @@
 <script setup lang="ts">
 interface Props {
-  type?: 'regular' | 'large'
+  type?: 'medium' | 'large',
+  text: string,
+	icon?: any
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  type: 'regular'
+  type: 'medium',
+  icon: null
 })
 </script>
 
 <template>
   <button :class="{ '--large': type === 'large' }">
-    <slot>
-      Secondary Btn
-    </slot>
+    <component :is="icon" />
+    <p>{{ text }}</p>
   </button>
 </template>
 
 <style scoped lang="scss">
 button {
-  @include action-medium;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   user-select: none;
   border-radius: 2px;
   padding: 8px;
@@ -28,7 +32,16 @@ button {
   cursor: pointer;
   width: fit-content;
   height: fit-content;
-  color: $text-action;
+  p {
+    @include action-medium;
+  }
+  p, svg {
+    color: $text-action;
+  }
+  svg {
+    height: 20px;
+    width: 20px;
+  }
   &.--large {
     @include action-large;
     padding: 8px 12px;
