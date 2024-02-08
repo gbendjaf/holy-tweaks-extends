@@ -22,6 +22,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style scoped lang="scss">
 button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   border: none;
   user-select: none;
   border-radius: 2px;
@@ -33,6 +36,8 @@ button {
   height: fit-content;
   p {
     @include action-medium;
+  }
+  p, svg {
     color: $text-onaction;
   }
   svg {
