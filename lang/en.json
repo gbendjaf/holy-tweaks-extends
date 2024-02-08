@@ -1,3 +1,5 @@
 {
-  "layerTest": "This is an i18n text from layer"
+  "error": {
+    "resetBtn": "Return to homepage"
+  }
 }

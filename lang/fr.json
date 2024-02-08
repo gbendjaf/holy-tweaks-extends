@@ -1,3 +1,5 @@
 {
-  "layerTest": "Je suis un texte i18n provenant du layer"
+  "error": {
+    "resetBtn": "Retourner à la page principale"
+  }
 }

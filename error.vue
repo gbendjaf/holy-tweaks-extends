@@ -1,14 +1,24 @@
 <script setup lang="ts">
-const props = defineProps({
-  error: Object
+interface Props {
+  error: any
+}
+
+const props = withDefaults(defineProps<Props>(), {
 })
+
+function useError () {
+  function handleError () {
+    clearError({ redirect: localePath({ path: runtimeConfig.public.ERROR_REDIRECT }) })
+  }
+
+  return {
+    handleError
+  }
+}
 
 const localePath = useLocalePath()
 const runtimeConfig = useRuntimeConfig()
-
-function handleError () {
-  clearError({ redirect: localePath({ path: runtimeConfig.public.ERROR_REDIRECT }) })
-}
+const { handleError } = useError()
 </script>
 
 <template>
@@ -16,6 +26,7 @@ function handleError () {
     <h1>{{ error.statusCode }}, Oops something went wrong !</h1>
     <ButtonPrimary
       type="large"
+      :text="$t('error.resetBtn')"
       @click="handleError"
     >
       Return to homepage
