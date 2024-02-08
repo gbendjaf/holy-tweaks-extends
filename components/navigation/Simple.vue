@@ -9,7 +9,8 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  openNewPage: false
+  openNewPage: false,
+	icon: null
 })
 </script>
 
@@ -18,7 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
     :to="props.to"
     :target="openNewPage ? '_blank' : ''"
   >
-    <component :is="icon"/>
+    <component :is="icon" />
     <p>{{ name }}</p>
   </NuxtLink>
 </template>
