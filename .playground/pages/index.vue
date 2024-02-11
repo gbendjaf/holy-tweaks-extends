@@ -90,10 +90,10 @@ function login () {
         >
           Free vbucks
         </NavigationExternalLink>
-        <ButtonPrimary />
-        <ButtonPrimary type="large"/>
-        <ButtonSecondary />
-        <ButtonSecondary type="large" />
+        <ButtonPrimary text="Primary"/>
+        <ButtonPrimary text="Primary" type="large"/>
+        <ButtonSecondary text="Secondary"/>
+        <ButtonSecondary text="Secondary" type="large" />
       </div>
     </section>
     <section class="ht-c-nav-menu-section">
