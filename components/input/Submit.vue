@@ -34,7 +34,7 @@ input {
   width: fit-content;
   color: $text-onaction;
   &:not(:disabled):hover {
-    background-color: $purple-40;
+    background-color: $bg-hoveractive-hi;
   }
   &.--large {
     @include action-large;

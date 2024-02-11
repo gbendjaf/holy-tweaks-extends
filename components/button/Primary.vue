@@ -45,7 +45,7 @@ button {
     width: 20px;
   }
   &:not(:disabled):hover {
-    background-color: $purple-40;
+    background-color: $bg-hoveractive-hi;
   }
   &.--large {
     @include action-large;
