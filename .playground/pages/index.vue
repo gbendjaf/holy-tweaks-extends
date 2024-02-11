@@ -145,7 +145,7 @@ main {
   align-items: center;
   gap: 50px;
   padding: 68px 24px 200px 24px;
-  background-color: $grey-20;
+  background-color: $grey-15;
   @media only screen and (min-width: 768px) {
     padding: 68px 34px 200px 34px;
   }
@@ -170,7 +170,7 @@ form {
   gap: 40px;
   padding: 20px;
   border: 2px solid $border-neutral;
-  background-color: $grey-15;
+  background-color: $grey-20;
   // background-color: pink;
 }
 </style>

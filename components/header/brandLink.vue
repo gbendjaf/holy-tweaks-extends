@@ -7,7 +7,7 @@ const runtimeConfig = useRuntimeConfig()
     class="ht-c-brand-link"
     :to="(runtimeConfig.public.MAIN_WEBSITE as string)"
   >
-    <IconClipE />
+    <IconBrand />
     Holy Tweaks
   </NuxtLink>
 </template>
@@ -15,13 +15,14 @@ const runtimeConfig = useRuntimeConfig()
 <style scoped lang="scss">
 .ht-c-brand-link {
   @include action-large;
+  font-size: 18px;
   height: 48px;
   display: flex;
   align-items: center;
   gap: 10px;
   svg {
-    width: 25px;
-    height: 26px;
+    width: 50px;
+    height: 20px;
   }
 }
 </style>
