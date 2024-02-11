@@ -87,7 +87,7 @@ function emitChange (event: Event): void {
   }
 }
 .ht-c-textarea ~ label {
-  @include action-medium;
+  @include action-large;
   line-height: 45px;
   width: 100%;
   height: 100%;
