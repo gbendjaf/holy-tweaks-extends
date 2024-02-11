@@ -25,6 +25,6 @@ nav {
   }
 }
 header {
-  background-color: $grey-20;
+  background-color: $grey-15;
 }
 </style>
