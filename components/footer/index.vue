@@ -101,7 +101,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
           class="ht-c-footer-brand__link"
           :to="(runtimeConfig.public.MAIN_WEBSITE as string)"
         >
-          <IconClipE />
+          <IconBrand />
           <p>Holy Tweaks Software</p>
         </NuxtLink>
         <div class="ht-c-footer-brand__socials">
@@ -172,6 +172,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
   gap: 10px;
   svg {
     color: $grey-95;
+    width: 32px;
   }
   p {
     color: $grey-80;
@@ -232,7 +233,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
 }
 footer {
   padding: 50px 20px;
-  background-color: $grey-20;
+  background-color: $grey-15;
   border-top: 1px solid $grey-40;
 }
 </style>

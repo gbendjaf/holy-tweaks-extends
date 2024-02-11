@@ -21,8 +21,12 @@ const runtimeConfig = useRuntimeConfig()
   align-items: center;
   gap: 10px;
   svg {
-    width: 50px;
-    height: 20px;
+    width: 45px;
+  }
+  @media only screen and (min-width: 1064px) {
+    svg {
+      width: 50px;
+    }
   }
 }
 </style>
