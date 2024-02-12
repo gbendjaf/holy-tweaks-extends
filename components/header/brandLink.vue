@@ -1,4 +1,12 @@
 <script setup lang="ts">
+interface Props {
+  mode?: 'short' | 'full'
+}
+
+withDefaults(defineProps<Props>(), {
+  mode: 'full'
+})
+
 const runtimeConfig = useRuntimeConfig()
 </script>
 
@@ -8,7 +16,7 @@ const runtimeConfig = useRuntimeConfig()
     :to="(runtimeConfig.public.MAIN_WEBSITE as string)"
   >
     <IconBrand />
-    Holy Tweaks
+    <p>{{ mode === 'full' ? 'Holy Tweaks' : undefined }}</p>
   </NuxtLink>
 </template>
 

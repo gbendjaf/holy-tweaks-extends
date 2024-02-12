@@ -5,7 +5,7 @@ const runtimeConfig = useRuntimeConfig()
 <template>
   <header>
     <nav>
-      <HeaderBrandLink />
+      <HeaderBrandLink mode="short"/>
       <p>|</p>
       <span>{{ runtimeConfig.public.CURRENT_SUBDOMAIN as string }}</span>
     </nav>
