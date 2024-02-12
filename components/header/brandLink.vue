@@ -16,20 +16,22 @@ const runtimeConfig = useRuntimeConfig()
     :to="(runtimeConfig.public.MAIN_WEBSITE as string)"
   >
     <IconBrand />
-    <p>{{ mode === 'full' ? 'Holy Tweaks' : undefined }}</p>
+    <p v-if="mode === 'full'">Holy Tweaks</p>
   </NuxtLink>
 </template>
 
 <style scoped lang="scss">
 .ht-c-brand-link {
-  @include action-large;
-  font-size: 18px;
   height: 48px;
   display: flex;
   align-items: center;
   gap: 10px;
   svg {
     width: 45px;
+  }
+  p {
+    @include action-large;
+    font-size: 18px;
   }
   @media only screen and (min-width: 1064px) {
     svg {
