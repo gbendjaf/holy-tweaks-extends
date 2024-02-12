@@ -35,7 +35,7 @@ const runtimeConfig = useRuntimeConfig()
   }
   @media only screen and (min-width: 1064px) {
     svg {
-      width: 50px;
+      width: 49px;
     }
   }
 }
