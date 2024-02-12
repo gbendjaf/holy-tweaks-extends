@@ -2,19 +2,39 @@
 interface Props {
   text: string,
   disabled?: boolean,
-  type?: 'medium' | 'large',
+  size?: 'medium' | 'large',
+  type?: 'primary' | 'secondary'
 }
 
 const props = withDefaults(defineProps<Props>(), {
   text: 'Input submit',
-  type: 'medium',
+  size: 'medium',
+  type: 'primary',
   disabled: false
 })
+
+function useClass () {
+  const isPrimary = computed<boolean>(() => {
+    return props.type === 'primary'
+  })
+
+  const inputClass = reactive({
+    '--large': props.size === 'large',
+    '--primary': isPrimary.value,
+    '--secondary': !isPrimary.value
+  })
+
+  return {
+    inputClass
+  }
+}
+
+const { inputClass } =  useClass()
 </script>
 
 <template>
   <input
-    :class="{ '--large': type === 'large' }"
+    :class="inputClass"
     type="submit"
     :value="text"
     :disabled="disabled"
@@ -24,15 +44,11 @@ const props = withDefaults(defineProps<Props>(), {
 <style scoped lang="scss">
 input {
   @include action-medium;
-  border: none;
-  user-select: none;
   border-radius: 2px;
   padding: 8px;
-  background-color: $bg-action;
-  transition: background-color 0.1s linear;
   cursor: pointer;
   width: fit-content;
-  color: $text-onaction;
+  transition: background-color 0.1s linear;
   &:not(:disabled):hover {
     background-color: $bg-hoveractive-hi;
   }
@@ -40,8 +56,30 @@ input {
     @include action-large;
     padding: 8px 12px;
   }
+  &.--primary {
+    border: none;
+    user-select: none;
+    background-color: $bg-action;
+    color: $text-onaction;
+    &:disabled {
+      background-color: $bg-disabled; 
+    }
+    &:not(:disabled):hover {
+      background-color: $bg-hoveractive-hi;
+    }
+  }
+  &.--secondary {
+    color: $text-action;
+    background-color: transparent;
+    border: 1px solid $border-action-hi;
+    &:disabled {
+      border: 1px solid $border-disabled;
+    }
+    &:not(:disabled):hover {
+      background-color: $alpha-white-8;
+    }
+  }
   &:disabled {
-    background-color: $bg-disabled;
     color: $text-disabled;
     cursor: default;
   }

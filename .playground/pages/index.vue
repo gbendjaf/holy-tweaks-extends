@@ -71,7 +71,7 @@ function login () {
 					<InputSubmit
 						class="ht-c-input-submit"
 						text="Me connecter"
-						type="large"
+						size="large"
 					/>
 				</div>
       </form>
