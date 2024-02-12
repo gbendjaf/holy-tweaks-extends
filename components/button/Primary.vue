@@ -1,19 +1,19 @@
 <script setup lang="ts">
 interface Props {
-  type?: 'medium' | 'large',
+  size?: 'medium' | 'large',
 	text: string,
 	icon?: any
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  type: 'medium',
+  size: 'medium',
 	icon: null
 })
 </script>
 
 <template>
   <button
-    :class="{ '--large': type === 'large' }"
+    :class="{ '--large': size === 'large' }"
   >
     <component :is="icon" />
     <p>{{ text }}</p>
