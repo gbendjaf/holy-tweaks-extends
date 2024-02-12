@@ -69,7 +69,7 @@ ul {
   border-radius: 3px;
   list-style: none;
   border: 1px solid $border-neutral;
-  background-color: $grey-15;
+  background-color: $grey-20;
 }
 li {
   @include action-large;
@@ -94,7 +94,7 @@ li {
       color: $text-body;
     }
     &:hover a {
-      background-color: $bg-hover-low;
+      background-color: $alpha-white-8;
     }
   }
 }

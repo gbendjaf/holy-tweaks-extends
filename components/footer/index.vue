@@ -171,11 +171,11 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
   align-items: center;
   gap: 10px;
   svg {
-    color: $grey-95;
+    color: $text-body;
     width: 32px;
   }
   p {
-    color: $grey-80;
+    color: $text-caption;
   }
   &:hover p {
     color: $text-body;
@@ -187,7 +187,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
   gap: 16px;
   a {
     display: flex;
-    color: $grey-80;
+    color: $text-caption;
     position: relative;
   }
   a:before {
@@ -196,7 +196,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
     content: "";
   }
   a:hover svg {
-    color: $grey-95;
+    color: $text-body;
   }
 }
 .ht-c-footer__pages-directory {
@@ -233,7 +233,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
 }
 footer {
   padding: 50px 20px;
-  background-color: $grey-15;
+  background-color: $bg-page;
   border-top: 1px solid $grey-40;
 }
 </style>

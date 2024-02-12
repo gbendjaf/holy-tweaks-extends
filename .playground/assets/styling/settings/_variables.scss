@@ -66,15 +66,15 @@ $gradient: linear-gradient(180deg, rgba(25, 20, 23, 0.50) 0%, rgba(25, 20, 23, 0
 
 /* TOKENS */
 
-$bg-action: $purple-50;
+$bg-action: $orange-70;
 $bg-page: $grey-15;
 $bg-section: $grey-20;
-$bg-active-hi: $purple-50;
+$bg-active-hi: $orange-70;
 $bg-active-low: $grey-25;
-$bg-brand: $purple-50;
-$bg-hover-hi: $purple-50;
+$bg-brand: $orange-70;
+$bg-hover-hi: $orange-70;
 $bg-hover-low: $alpha-white-4;
-$bg-hoveractive-hi: $purple-40;
+$bg-hoveractive-hi: $orange-60;
 $bg-none: $alpha-white-0;
 $bg-overlay-hi: $black-80;
 $bg-disabled: $alpha-white-8;
@@ -82,32 +82,32 @@ $bg-overlap: $grey-30;
 $bg-error: $error-20;
 $bg-static: $grey-40;
 
-$text-onaction: $grey-100;
+$text-onaction: $grey-15;
 $text-action: $grey-95;
 $text-active: $grey-100;
 $text-title: $grey-100;
-$text-onbrand: $grey-100;
+$text-onbrand: $grey-20;
 $text-body: $grey-95;
 $text-caption: $grey-80;
-$text-onhover: $grey-100;
+$text-onhover: $grey-15;
 $text-error: $error-70;
 $text-warning: $warning-70;
 $text-success: $success70;
-$text-brand: $purple-50;
+$text-brand: $orange-70;
 $text-disabled: $grey-60;
 
 $border-action-hi: $grey-100;
 $border-action-low: $grey-28;
 $border-neutral: $grey-28;
-$border-brand: $purple-50;
+$border-brand: $orange-70;
 $border-neutral-hi: $grey-25;
 $border-active-hi: $grey-100;
 $border-active-low: $grey-80;
 $border-error: $error-50;
 $border-disabled: $grey-40;
 
-$brand-max: $purple-70;
-$brand-hi: $purple-60;
-$brand-mid: $purple-50;
-$brand-low: $purple-40;
-$brand-min: $purple-30;
+$brand-max: $orange-70;
+$brand-hi: $orange-60;
+$brand-mid: $orange-50;
+$brand-low: $orange-40;
+$brand-min: $orange-30;

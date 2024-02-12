@@ -22,7 +22,7 @@ header {
   top: 0;
   border-bottom: 1px solid $grey-40;
   padding: 0 24px;
-  background-color: rgba($grey-15, 0.8);
+  background-color: rgba($bg-page, 0.8);
   backdrop-filter: blur(10px);
   @media only screen and (min-width: 768px) {
     padding: 0 34px;
