@@ -43,7 +43,9 @@ button {
     width: 20px;
   }
   &.--large {
-    @include action-large;
+    p {
+      @include action-large;
+    }
     padding: 8px 12px;
   }
   &:disabled {
