@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ModalDummy from '@/components/modal/Dummy.vue'
 import { ref } from 'vue'
 
 const inputText = ref('')
@@ -26,6 +27,8 @@ const subMenuRedirection = [
 function login () {
   console.log('login tentative !')
 }
+
+const { open: openModal, close: closeModal } = useModal()
 </script>
 
 <template>
@@ -109,6 +112,15 @@ function login () {
         />
       </div>
     </section>
+    <section class="ht-c-modal-section">
+      <h2>And our modal</h2>
+      <div class="ht-l-flex-gap">
+        <ButtonPrimary
+          text="Open modal"
+          @click="openModal(ModalDummy, 'Custom title')"
+        />
+      </div>
+    </section>
   </main>
 </template>
 
@@ -138,6 +150,11 @@ function login () {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+}
+.ht-c-modal-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 main {
   display: flex;
