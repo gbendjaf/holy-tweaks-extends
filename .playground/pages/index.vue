@@ -94,9 +94,11 @@ const { open: openModal, close: closeModal } = useModal()
           Free vbucks
         </NavigationExternalLink>
         <ButtonPrimary text="Primary"/>
-        <ButtonPrimary text="Primary" type="large"/>
+        <ButtonPrimary text="Primary Disabled" disabled/>
+        <ButtonPrimary text="Primary Large" size="large"/>
         <ButtonSecondary text="Secondary"/>
-        <ButtonSecondary text="Secondary" type="large" />
+        <ButtonSecondary text="Secondary Disabled" disabled/>
+        <ButtonSecondary text="Secondary Large" size="large" />
       </div>
     </section>
     <section class="ht-c-nav-menu-section">
@@ -132,7 +134,7 @@ const { open: openModal, close: closeModal } = useModal()
   max-width: 700px;
 }
 .ht-c-other-section {
-  max-width: 500px;
+  max-width: 600px;
 }
 .ht-c-input-submit {
   align-self: flex-end;

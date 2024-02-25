@@ -49,7 +49,9 @@ button {
     padding: 8px 12px;
   }
   &:disabled {
-    color: $text-disabled;
+    p {
+      color: $text-disabled;
+    }
     border: 1px solid $border-disabled;
     cursor: default;
   }

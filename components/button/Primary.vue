@@ -55,8 +55,10 @@ button {
   }
   &:disabled {
     background-color: $bg-disabled;
-    color: $text-disabled;
     cursor: default;
+    p {
+      color: $text-disabled;
+    }
   }
   &:focus-visible {
     outline: 1px solid $border-active-hi;
