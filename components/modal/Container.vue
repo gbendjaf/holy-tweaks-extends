@@ -95,8 +95,8 @@ const { isOpen, view, title, close } = useModalState()
     align-items: center;
     gap: 16px;
     svg {
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
       cursor: pointer;
       color: $text-action;
     }
