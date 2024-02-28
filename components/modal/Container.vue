@@ -78,6 +78,7 @@ const { isOpen, view, title, close } = useModalState()
   justify-content: center;
   background-color: $bg-overlay-hi;
   transition: opacity 0.2s ease;
+  padding: 24px;
 }
 
 .ht-c-modal-content {
