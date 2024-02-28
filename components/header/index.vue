@@ -18,7 +18,7 @@ const runtimeConfig = useRuntimeConfig()
 header {
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 20;
   top: 0;
   border-bottom: 1px solid $grey-40;
   padding: 0 24px;
