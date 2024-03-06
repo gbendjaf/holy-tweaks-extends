@@ -1,18 +1,7 @@
 <script setup lang="ts">
-interface Props {
-  closable: boolean,
-  closableFromOutside?: boolean
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  closable: false,
-  closableFromOutside: false
-})
+const { isOpen, view, title, closable, closableFromOutside } = useModal()
 
 function useModalState () {
-  const isOpen = useState('is-modal-open')
-  const view = useState('modal-view')
-  const title = useState('modal-title')
 
   function close () {
     isOpen.value = false
@@ -30,14 +19,14 @@ function useModalEvents () {
   const target = ref(null)
   
   onClickOutside(target, event => {
-    if (props.closableFromOutside) close()
+    if (closableFromOutside.value) close()
   })
 
   return { target }
 }
 
 const { target: modalContainerRef } = useModalEvents()
-const { isOpen, view, title, close } = useModalState()
+const { close } = useModalState()
 </script>
 
 <template>

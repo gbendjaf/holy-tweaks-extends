@@ -119,7 +119,7 @@ const { open: openModal, close: closeModal } = useModal()
       <div class="ht-l-flex-gap">
         <ButtonPrimary
           text="Open modal"
-          @click="openModal(ModalDummy, 'Custom title')"
+          @click="openModal(ModalDummy, 'Custom title', true, true)"
         />
       </div>
     </section>

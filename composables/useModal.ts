@@ -2,9 +2,13 @@ export default function () {
   const isOpen = useState('is-modal-open', () => false)
   const view = useState('modal-view')
   const title = useState<string>('modal-title', () => 'Defaul title')
+  const closable = useState<boolean>('modal-closable', () => false)
+  const closableFromOutside = useState<boolean>('modal-closable-from-outside', () => false)
 
-	function open (modalView: object, modalTitle?: string) {
+	function open (modalView: object, modalTitle?: string, isModalClosable: boolean, isModalClosableFromOutside?: boolean) {
     if (modalTitle) title.value = modalTitle
+    if (isModalClosableFromOutside) closableFromOutside.value = isModalClosableFromOutside
+    closable.value = isModalClosable
     view.value = markRaw(modalView)
     isOpen.value = true
   }
@@ -16,5 +20,10 @@ export default function () {
 	return {
     open,
     close,
+    isOpen,
+    view,
+    title,
+    closable,
+    closableFromOutside
   }
 }
