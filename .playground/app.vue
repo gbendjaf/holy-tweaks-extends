@@ -1,9 +1,6 @@
 <template>
 	<NuxtLayout>
     <NuxtPage />
-		<ModalContainer
-			closable
-			closable-from-outside
-		/>
+		<ModalContainer />
 	</NuxtLayout>
 </template>
