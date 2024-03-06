@@ -1,5 +1,5 @@
 export default function () {
-  const isOpen = useState('is-modal-open', () => false)
+  const isOpen = useState('modal-is-open', () => false)
   const view = useState('modal-view')
   const title = useState<string>('modal-title', () => 'Defaul title')
   const closable = useState<boolean>('modal-closable', () => false)

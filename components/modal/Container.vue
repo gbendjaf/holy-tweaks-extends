@@ -1,17 +1,22 @@
 <script setup lang="ts">
-const { isOpen, view, title, closable, closableFromOutside } = useModal()
-
 function useModalState () {
+  const isOpen = useState('modal-is-open')
+  const view = useState('modal-view')
+  const title = useState('modal-title')
+  const closable = useState('modal-closable')
+  const closableFromOutside = useState('modal-closable-from-outside')
 
   function close () {
     isOpen.value = false
   }
 
   return {
+    close,
     isOpen,
     view,
     title,
-    close
+    closable,
+    closableFromOutside
   }
 }
 
@@ -26,22 +31,22 @@ function useModalEvents () {
 }
 
 const { target: modalContainerRef } = useModalEvents()
-const { close } = useModalState()
+const { close, isOpen, view, title, closable, closableFromOutside } = useModalState()
 </script>
 
 <template>
   <Teleport to="body">
     <transition name="modal">
       <div
-        v-if="isOpen"
+        v-show="isOpen"
         class="ht-l-modal-mask"
       >
         <div
-          class="ht-c-modal-content"
           ref="modalContainerRef"
+          class="ht-c-modal-content"
         >
           <div class="ht-c-modal-content__heading">
-            <h2>{{ title }}</h2>
+            <h2>{{ title }}{{ closable }}</h2>
             <IconClose
               v-if="closable"
               @click="close"
