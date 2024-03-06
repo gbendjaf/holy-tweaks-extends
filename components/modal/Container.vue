@@ -38,7 +38,7 @@ const { close, isOpen, view, title, closable, closableFromOutside } = useModalSt
   <Teleport to="body">
     <transition name="modal">
       <div
-        v-show="isOpen"
+        v-if="isOpen"
         class="ht-l-modal-mask"
       >
         <div
