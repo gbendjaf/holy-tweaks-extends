@@ -46,7 +46,7 @@ const { close, isOpen, view, title, closable, closableFromOutside } = useModalSt
           class="ht-c-modal-content"
         >
           <div class="ht-c-modal-content__heading">
-            <h2>{{ title }}</h2>
+            <h3>{{ title }}</h3>
             <IconClose
               v-if="closable"
               @click="close"
@@ -95,10 +95,6 @@ const { close, isOpen, view, title, closable, closableFromOutside } = useModalSt
       cursor: pointer;
       color: $text-action;
     }
-  }
-  h2 {
-    @include heading-small;
-    color: $text-title;
   }
 }
 
