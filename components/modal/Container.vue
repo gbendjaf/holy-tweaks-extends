@@ -46,7 +46,7 @@ const { close, isOpen, view, title, closable, closableFromOutside } = useModalSt
           class="ht-c-modal-content"
         >
           <div class="ht-c-modal-content__heading">
-            <h2>{{ title }}{{ closable }}</h2>
+            <h2>{{ title }}</h2>
             <IconClose
               v-if="closable"
               @click="close"
