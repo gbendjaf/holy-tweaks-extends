@@ -83,7 +83,7 @@ const { close, isOpen, view, title, closable, closableFromOutside } = useModalSt
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   &__heading {
     display: flex;
     justify-content: space-between;
