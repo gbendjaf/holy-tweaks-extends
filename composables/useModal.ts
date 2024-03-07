@@ -19,11 +19,6 @@ export default function () {
 
 	return {
     open,
-    close,
-    isOpen,
-    view,
-    title,
-    closable,
-    closableFromOutside
+    close
   }
 }
