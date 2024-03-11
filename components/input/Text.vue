@@ -6,8 +6,9 @@ interface Props {
   disabled?: boolean,
   type?: 'text' | 'email',
   required?: boolean,
-  autocomplete: string,
-  maxlength?: number
+  autocomplete?: string,
+  maxlength?: number,
+  pattern?: string,
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -16,7 +17,8 @@ const props = withDefaults(defineProps<Props>(), {
   error: false,
   required: false,
   autocomplete: 'nope',
-  maxlength: 100
+  maxlength: 100,
+  pattern: undefined,
 })
 
 const emit = defineEmits<{
@@ -40,6 +42,7 @@ function emitChange (event: Event): void {
       :disabled="disabled"
       :required="required"
       :maxlength="maxlength"
+      :pattern="pattern"
       placeholder=""
       spellcheck="false"
       @input="emitChange($event)"
