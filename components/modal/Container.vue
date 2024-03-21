@@ -78,6 +78,8 @@ const { close, isOpen, view, title, closable, closableFromOutside } = useModalSt
 .ht-c-modal-content {
   width: fit-content;
   height: fit-content;
+  max-height: 100%;
+  overflow: auto;
   padding: 20px 24px;
   background-color: $bg-section;
   transition: all 0.3s ease;
