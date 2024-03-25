@@ -49,6 +49,7 @@ const { isSelected } = useRadioState()
   border: 1px solid $border-action-low;
   display: flex;
   gap: 12px;
+  cursor: pointer;
   &__dot {
     position: relative;
     min-width: 20px;
