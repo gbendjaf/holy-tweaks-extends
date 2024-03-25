@@ -1,9 +1,9 @@
 <script setup lang="ts">
 interface Props {
-  size: 'medium' | 'large',
-	text: string,
-	icon: any,
-  isLoading: boolean
+  size?: 'medium' | 'large',
+	text?: string,
+	icon?: any,
+isLoading?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {

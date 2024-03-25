@@ -1,10 +1,10 @@
 <script setup lang="ts">
 interface Props {
-  text: string,
+  text?: string,
   disabled?: boolean,
   size?: 'medium' | 'large',
   type?: 'primary' | 'secondary',
-  isLoading: boolean,
+  isLoading?: boolean,
 }
 
 const props = withDefaults(defineProps<Props>(), {
