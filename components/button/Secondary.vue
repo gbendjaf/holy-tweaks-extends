@@ -1,15 +1,16 @@
 <script setup lang="ts">
 interface Props {
-  size?: 'medium' | 'large',
+  size: 'medium' | 'large',
   text: string,
-	icon?: any,
+	icon: any,
   isLoading: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  text: 'dummy text',
   size: 'medium',
   icon: null,
-  isLoading: false
+  isLoading: false,
 })
 </script>
 
