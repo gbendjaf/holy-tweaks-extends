@@ -69,7 +69,6 @@ const props = withDefaults(defineProps<Props>(), {
     }
   }
   &.--is-loading {
-    max-height: 36px;
     svg {
       color: $text-onaction;
     }
