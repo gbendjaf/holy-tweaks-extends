@@ -31,7 +31,7 @@ const props = withDefaults(defineProps<Props>(), {
 </template>
 
 <style scoped lang="scss">
-button {
+.ht-c-btn-secondary {
   display: flex;
   align-items: center;
   display: flex;
