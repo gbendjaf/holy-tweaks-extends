@@ -2,56 +2,76 @@
 interface Props {
   size?: 'medium' | 'large',
 	text: string,
-	icon?: any
+	icon?: any,
+  isLoading: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 'medium',
-	icon: null
+	icon: null,
+  isLoading: false
 })
 </script>
 
 <template>
   <button
-    :class="{ '--large': size === 'large' }"
+    class="ht-c-btn-primary"
+    :class="{ '--large': size === 'large', '--is-loading': isLoading }"
   >
-    <component :is="icon" />
-    <p>{{ text }}</p>
+    <div  
+      v-if="!isLoading"
+      class="ht-c-btn-primary__content"
+    >
+      <component :is="icon" />
+      <p>{{ text }}</p>
+    </div>
+    <IconLoaderHalfCIrcle v-else-if="isLoading" />
   </button>
 </template>
 
 <style scoped lang="scss">
-button {
+.ht-c-btn-primary {
   display: flex;
   align-items: center;
-  gap: 8px;
   border: none;
   user-select: none;
   border-radius: 2px;
   padding: 8px;
   background-color: $bg-action;
   transition: background-color 0.1s ease;
+  transition: width 0.1s ease;
   cursor: pointer;
   width: fit-content;
   height: fit-content;
-  p {
-    @include action-medium;
-  }
-  p, svg {
-    color: $text-onaction;
-  }
-  svg {
-    height: 20px;
-    width: 20px;
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+    p, svg {
+      color: $text-onaction;
+    }
+    p {
+      @include action-medium;
+    }
   }
   &:not(:disabled):hover {
     background-color: $bg-hoveractive-hi;
   }
   &.--large {
+    padding: 8px 12px;
     p {
       @include action-large;
     }
-    padding: 8px 12px;
+  }
+  &.--is-loading {
+    max-height: 36px;
+    svg {
+      color: $text-onaction;
+    }
   }
   &:disabled {
     background-color: $bg-disabled;

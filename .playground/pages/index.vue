@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ModalDummy from '@/components/modal/Dummy.vue'
+import { IconAbacusBold } from '#components'
 import { ref } from 'vue'
 
 const inputText = ref('')
@@ -95,10 +96,15 @@ const { open: openModal, close: closeModal } = useModal()
         </NavigationExternalLink>
         <ButtonPrimary text="Primary"/>
         <ButtonPrimary text="Primary Disabled" disabled/>
-        <ButtonPrimary text="Primary Large" size="large"/>
+        <ButtonPrimary 
+          text="Primary Large"
+          size="large"
+        />
         <ButtonSecondary text="Secondary"/>
         <ButtonSecondary text="Secondary Disabled" disabled/>
         <ButtonSecondary text="Secondary Large" size="large" />
+        <ButtonPrimary text="loading showcase" size="medium"  is-loading />
+        <ButtonSecondary text="loading showcase" size="medium"  is-loading />
       </div>
     </section>
     <section class="ht-c-nav-menu-section">
@@ -143,7 +149,7 @@ const { open: openModal, close: closeModal } = useModal()
   display: flex;
   gap: 10px;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
 }
 .ht-c-form__validation {
