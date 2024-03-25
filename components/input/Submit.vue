@@ -61,6 +61,7 @@ const { inputClass } =  useClass()
   width: fit-content;
   transition: background-color 0.1s linear;
   transition: width 0.1s linear;
+  max-height: 32px;
   p {
     @include action-medium;
   }
@@ -68,10 +69,11 @@ const { inputClass } =  useClass()
     background-color: $bg-hoveractive-hi;
   }
   &.--large {
+    padding: 8px 12px;
+    max-height: 35px;
     p {
       @include action-large;
     }
-    padding: 8px 12px;
   }
   &.--primary {
     border: none;
