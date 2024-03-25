@@ -16,12 +16,14 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 function useClass () {
-  const inputClass = reactive({
-    '--large': props.size === 'large',
-    '--primary': props.type === 'primary',
-    '--secondary': props.type === 'secondary',
-    '--disabled': props.disabled,
-    '--is-loading': props.isLoading
+  const inputClass = computed(() => {
+    return {
+      '--large': props.size === 'large',
+      '--primary': props.type === 'primary',
+      '--secondary': props.type === 'secondary',
+      '--disabled': props.disabled === true,
+      '--is-loading': props.isLoading === true
+    }
   })
 
   return {
@@ -40,8 +42,10 @@ const { inputClass } =  useClass()
     tabindex="0"
   >
     <p v-if="!props.isLoading">{{ text }}</p>
-    <!-- <IconLoaderHalfCIrcle v-else /> -->
-    <p v-if="props.isLoading">Loading</p>
+    <IconLoaderHalfCIrcle
+      v-else
+      class="ht-c-submit-btn__loader"
+    />
     <input
       id="submit"
       type="submit"
@@ -85,7 +89,7 @@ const { inputClass } =  useClass()
     &:not(.--disabled):hover {
       background-color: $bg-hoveractive-hi;
     }
-    &.--is-loading svg {
+    & .ht-c-submit-btn__loader {
       color: $text-onaction;
     }
   }
@@ -101,7 +105,7 @@ const { inputClass } =  useClass()
     &:not(.--disabled):hover {
       background-color: $alpha-white-8;
     }
-    &.--is-loading svg {
+    & .ht-c-submit-btn__loader {
       color: $text-action;
     }
   }
