@@ -60,6 +60,7 @@ const { inputClass } =  useClass()
   cursor: pointer;
   width: fit-content;
   transition: background-color 0.1s linear;
+  transition: width 0.1s linear;
   p {
     @include action-medium;
   }
