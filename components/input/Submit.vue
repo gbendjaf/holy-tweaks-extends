@@ -16,14 +16,10 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 function useClass () {
-  const isPrimary = computed<boolean>(() => {
-    return props.type === 'primary'
-  })
-
   const inputClass = reactive({
     '--large': props.size === 'large',
-    '--primary': isPrimary.value,
-    '--secondary': !isPrimary.value,
+    '--primary': props.type === 'primary',
+    '--secondary': props.type === 'secondary',
     '--disabled': props.disabled,
     '--is-loading': props.isLoading
   })
@@ -44,7 +40,8 @@ const { inputClass } =  useClass()
     tabindex="0"
   >
     <p v-if="!props.isLoading">{{ text }}</p>
-    <IconLoaderHalfCIrcle v-else />
+    <!-- <IconLoaderHalfCIrcle v-else /> -->
+    <p v-if="props.isLoading">Loading</p>
     <input
       id="submit"
       type="submit"
