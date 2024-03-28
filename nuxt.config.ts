@@ -3,8 +3,8 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			MAIN_WEBSITE: 'https://www.holytweaks.com',
-      CURRENT_SUBDOMAIN: 'subdomain',
-      ERROR_REDIRECT: '/'
+      CURRENT_SUBDOMAIN: process.env.NUXT_CURRENT_SUBDOMAIN ?? 'subdomain',
+      ERROR_REDIRECT: process.env.NUXT_ERROR_REDIRECT ?? '/'
 		}
 	},
   devtools: { enabled: true },
