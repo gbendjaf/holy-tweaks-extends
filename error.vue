@@ -10,7 +10,12 @@ const props = withDefaults(defineProps<Props>(), {
 
 function useError () {
   function handleError () {
-    clearError({ redirect: localePath({ path: runtimeConfig.public.ERROR_REDIRECT }) })
+    if (props.error.data && (props.error.data as { closePage?: boolean }).closePage) {
+      clearError()
+      window.close()
+    } else {
+      clearError({ redirect: localePath({ path: runtimeConfig.public.ERROR_REDIRECT }) })
+    }
   }
 
   return {
@@ -25,7 +30,7 @@ const { handleError } = useError()
 
 <template>
   <main class="ht-l-error-page">
-    <h1>{{ error.statusCode }}, {{ error.statusMessage ?? $t('error.defaultMsg') }}</h1>
+    <h1>{{ error.statusCode }}, {{ error.message ?? $t('error.defaultMsg') }}</h1>
     <ButtonPrimary
       type="large"
       :text="$t('error.resetBtn')"
