@@ -10,12 +10,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 function useError () {
   function handleError () {
-    if (props.error.data && (props.error.data as { closePage?: boolean }).closePage) {
-      clearError()
-      window.close()
-    } else {
-      clearError({ redirect: localePath({ path: runtimeConfig.public.ERROR_REDIRECT }) })
-    }
+    clearError({ redirect: localePath({ path: runtimeConfig.public.ERROR_REDIRECT }) })
   }
 
   return {
