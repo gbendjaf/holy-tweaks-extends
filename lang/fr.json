@@ -1,6 +1,8 @@
 {
   "error": {
     "resetBtn": "Retourner à la page principale",
-    "defaultMsg": "Oups quelque chose s'est mal passé !"
+    "defaultMsg": "Oups quelque chose s'est mal passé !",
+    "closeWindow": "Tu peux fermet cette fenêtre.",
+    "clearBtn": "Retourner à la page d'accueil"
   }
 }

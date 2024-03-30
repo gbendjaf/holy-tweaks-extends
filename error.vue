@@ -26,12 +26,13 @@ const { handleError } = useError()
 <template>
   <main class="ht-l-error-page">
     <h1>{{ error.statusCode }}, {{ error.message ?? $t('error.defaultMsg') }}</h1>
+    <h2 v-if="error.data && (error.data as Record<string, any> ).clearMethod === 'close'">{{ $t('error.closeWindow') }}</h2>
     <ButtonPrimary
-      type="large"
+      size="large"
       :text="$t('error.resetBtn')"
       @click="handleError"
     >
-      Return to homepage
+      {{ $t('error.clearBtn') }}
     </ButtonPrimary>
   </main>
 </template>
@@ -51,6 +52,7 @@ const { handleError } = useError()
   padding: 30px;
   h1 {
     text-align: center;
+    max-width: 800px;
   }
 }
 </style>
