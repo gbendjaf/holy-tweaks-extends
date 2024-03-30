@@ -31,9 +31,7 @@ const { handleError } = useError()
       size="large"
       :text="$t('error.resetBtn')"
       @click="handleError"
-    >
-      {{ $t('error.clearBtn') }}
-    </ButtonPrimary>
+    />
   </main>
 </template>
 

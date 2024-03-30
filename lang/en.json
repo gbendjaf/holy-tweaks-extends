@@ -2,7 +2,6 @@
   "error": {
     "resetBtn": "Return to homepage",
     "defaultMsg": "Oops something went wrong!",
-    "closeWindow": "You can close this window.",
-    "clearBtn": "Return to homepage"
+    "closeWindow": "You can close this window."
   }
 }
