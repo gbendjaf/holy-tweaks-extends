@@ -21,6 +21,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@vueuse/core": "^10.8.0"
+    "@vueuse/core": "^10.8.0",
+    "memoize": "^10.0.0"
   }
 }
