@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import type { NuxtError } from '#app'
+
 interface Props {
-  error: any
+  error: NuxtError
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -23,7 +25,7 @@ const { handleError } = useError()
 
 <template>
   <main class="ht-l-error-page">
-    <h1>{{ error.statusCode }}, Oops something went wrong !</h1>
+    <h1>{{ error.statusCode }}, {{ error.statusMessage ?? $t('error.defaultMsg') }}</h1>
     <ButtonPrimary
       type="large"
       :text="$t('error.resetBtn')"

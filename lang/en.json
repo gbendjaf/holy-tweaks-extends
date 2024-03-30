@@ -1,5 +1,6 @@
 {
   "error": {
-    "resetBtn": "Return to homepage"
+    "resetBtn": "Return to homepage",
+    "defaultMsg": "Oops something went wrong!"
   }
 }

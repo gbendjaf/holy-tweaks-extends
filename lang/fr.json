@@ -1,5 +1,6 @@
 {
   "error": {
-    "resetBtn": "Retourner à la page principale"
+    "resetBtn": "Retourner à la page principale",
+    "defaultMsg": "Oups quelque chose s'est mal passé !"
   }
 }
