@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const runtimeConfig = useRuntimeConfig()
 </script>
 
 <template>
   <header>
     <nav class="ht-l-header-container">
       <HeaderBrandLink />
+      <slot />
     </nav>
   </header>
 </template>
@@ -14,6 +14,9 @@ const runtimeConfig = useRuntimeConfig()
 .ht-l-header-container {
   max-width: 1250px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
 }
 header {
   position: fixed;
