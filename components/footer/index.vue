@@ -72,22 +72,22 @@ const runtimeConfig = useRuntimeConfig()
 const socialLinks: Array<{ component: any, link: string, alt: string }> = [
   {
     component: resolveComponent('IconDiscord'),
-    link: 'https://discord.com/invite/Gmvwj6fEkz',
-    alt: 'Our Discord'
+    link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).DISCORD,
+    alt: 'Our Discord server'
   },
   {
     component: resolveComponent('IconTwitter'),
-    link: 'https://twitter.com/HolyTweaks',
+    link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).TWITTER,
     alt: 'Our Twitter'
   },
   {
     component: resolveComponent('IconYouTube'),
-    link: 'https://www.youtube.com/@HolyTweaksSoftware',
+    link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).YOUTUBE,
     alt: 'Our YouTube channel'
   },
   {
     component: resolveComponent('IconTikTok'),
-    link: 'https://www.tiktok.com/@holytweaks',
+    link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).TIKTOK,
     alt: 'Our TikTok'
   }
 ]

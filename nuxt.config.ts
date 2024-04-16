@@ -4,7 +4,13 @@ export default defineNuxtConfig({
 		public: {
 			MAIN_WEBSITE: 'https://www.holytweaks.com',
       CURRENT_SUBDOMAIN: process.env.NUXT_CURRENT_SUBDOMAIN ?? 'subdomain',
-      ERROR_REDIRECT: process.env.NUXT_ERROR_REDIRECT ?? '/'
+      ERROR_REDIRECT: process.env.NUXT_ERROR_REDIRECT ?? '/',
+      SOCIAL_LINKS: {
+        DISCORD: process.env.NUXT_DISCORD_LINK ?? 'https://discord.com/invite/Gmvwj6fEkz',
+        TWITTER: process.env.NUXT_TWITTER_LINK ?? 'https://twitter.com/HolyTweaks',
+        YOUTUBE: process.env.NUXT_YOUTUBE_LINK ?? 'https://www.youtube.com/@HolyTweaksSoftware',
+        TIKTOK: process.env.NUXT_TIKTOK_LINK ?? 'https://www.tiktok.com/@holytweaks',
+      }
 		}
 	},
   devtools: { enabled: true },
