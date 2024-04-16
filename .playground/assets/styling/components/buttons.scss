@@ -1,0 +1,31 @@
+.ht-c-primary-btn-style {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 2px;
+  padding: 8px;
+  background-color: $bg-action;
+  transition: background-color 0.1s ease;
+  transition: width 0.1s ease;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  & p, svg {
+    color: $text-onaction;
+  }
+  & p {
+    @include action-medium;
+  }
+  &.--large {
+    padding: 8px 12px;
+    p {
+      @include action-large;
+    }
+  }
+  &:hover {
+    background-color: $bg-hoveractive-hi;
+  }
+  &:focus-visible {
+    outline: 1px solid $border-active-hi;
+  }
+}
