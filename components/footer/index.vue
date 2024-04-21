@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 interface Props {
-  pagesDirectory?: Array<{
+  pagesDirectory: Array<{
     title: string,
     pages: Array<{ link: string, name: string }>
   }>
