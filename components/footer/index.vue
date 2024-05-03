@@ -232,7 +232,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
   }
 }
 footer {
-  padding: 50px 20px;
+  padding: 50px 24px;
   background-color: $bg-page;
   border-top: 1px solid $grey-40;
 }
