@@ -12,7 +12,7 @@
 
 <style scoped lang="scss">
 .ht-l-header-container {
-  max-width: 1250px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
