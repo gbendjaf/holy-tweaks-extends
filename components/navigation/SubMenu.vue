@@ -1,5 +1,5 @@
 <script setup lang="ts">
-interface Props extends NavigationSubMenu {
+interface Props extends /* @vue-ignore */ NavigationSubMenu {
 }
 
 const props = withDefaults(defineProps<Props>(), {

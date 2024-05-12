@@ -1,5 +1,5 @@
 <script setup lang="ts">
-interface Props extends NavigationPrimary {
+interface Props extends /* @vue-ignore */ NavigationPrimary {
 }
 
 const props = withDefaults(defineProps<Props>(), {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-interface Props extends NavigationSimple {
+interface Props extends /* @vue-ignore */ NavigationSimple {
 }
 
 const props = withDefaults(defineProps<Props>(), {
