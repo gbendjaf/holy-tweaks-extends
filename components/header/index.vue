@@ -1,4 +1,8 @@
 <script setup lang="ts">
+interface Props {
+  navigation: Array<NavigationSimple | NavigationSubMenu>,
+  ctaBtn: NavigationPrimary
+}
 </script>
 
 <template>

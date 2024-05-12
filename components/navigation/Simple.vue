@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import type { RouteLocationRaw } from '#vue-router'
-
-interface Props {
-  to: RouteLocationRaw,
-  icon?: any,
-  name: string,
-  openNewPage?: boolean,
+interface Props extends NavigationSimple {
 }
 
 const props = withDefaults(defineProps<Props>(), {

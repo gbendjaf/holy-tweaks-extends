@@ -1,8 +1,5 @@
 <script setup lang="ts">
-interface Props {
-  link: string,
-  size: 'medium' | 'large'
-  target?: string,
+interface Props extends NavigationPrimary {
 }
 
 const props = withDefaults(defineProps<Props>(), {

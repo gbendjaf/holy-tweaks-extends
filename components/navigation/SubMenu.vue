@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import type { RouteLocationRaw } from '#vue-router'
-
-interface Props {
-  title: string
-  routes: Array<{
-    to: RouteLocationRaw | string,
-    name: string,
-    icon?: any
-  }>,
+interface Props extends NavigationSubMenu {
 }
 
 const props = withDefaults(defineProps<Props>(), {

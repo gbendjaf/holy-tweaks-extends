@@ -32,6 +32,12 @@ const runtimeConfig = useRuntimeConfig()
   p {
     @include action-large;
     font-size: 18px;
+    display: none;
+  }
+  @media only screen and (min-width: 768px) {
+    p {
+      display: block;
+    }
   }
   @media only screen and (min-width: 1064px) {
     svg {
