@@ -1,5 +1,11 @@
 <script setup lang="ts">
-interface Props extends /* @vue-ignore */ NavigationSubMenu {
+interface Props {
+  title: string
+  routes: Array<{
+    to: any | string,
+    name: string,
+    icon?: any
+  }>,
 }
 
 const props = withDefaults(defineProps<Props>(), {

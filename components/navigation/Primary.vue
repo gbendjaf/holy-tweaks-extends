@@ -1,5 +1,8 @@
 <script setup lang="ts">
-interface Props extends /* @vue-ignore */ NavigationPrimary {
+interface Props {
+  link: string,
+  size: 'medium' | 'large'
+  target?: string,
 }
 
 const props = withDefaults(defineProps<Props>(), {

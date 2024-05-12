@@ -1,5 +1,4 @@
-// Add an export to ensure it is treated as a module
-export {}
+import type { RouteLocationRaw } from '#vue-router'
 
 declare global {
   interface NavigationSimple {
@@ -11,7 +10,7 @@ declare global {
   interface NavigationSubMenu {
     title: string
     routes: Array<{
-      to: RouteLocationRaw | string,
+      to: any | string,
       name: string,
       icon?: any
     }>,
@@ -22,3 +21,6 @@ declare global {
     target?: string,
   }
 }
+
+// Add an export to ensure it is treated as a module
+export {}
