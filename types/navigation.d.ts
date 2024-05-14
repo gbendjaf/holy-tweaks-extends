@@ -20,6 +20,9 @@ declare global {
     size: 'medium' | 'large'
     target?: string,
   }
+  interface HeaderCtaBtn extends NavigationPrimary {
+    caption: string
+  }
 }
 
 // Add an export to ensure it is treated as a module

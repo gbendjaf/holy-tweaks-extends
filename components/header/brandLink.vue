@@ -1,19 +1,30 @@
 <script setup lang="ts">
+import type { RouteLocationRaw } from '#vue-router'
+
 interface Props {
-  mode?: 'short' | 'full'
+  mode?: 'short' | 'full',
 }
 
 withDefaults(defineProps<Props>(), {
   mode: 'full'
 })
 
+function useInject () {
+  const homePage = inject('home-page', undefined)
+
+  return {
+    homePage
+  }
+}
+
+const { homePage } = useInject()
 const runtimeConfig = useRuntimeConfig()
 </script>
 
 <template>
   <NuxtLink
     class="ht-c-brand-link"
-    :to="(runtimeConfig.public.MAIN_WEBSITE as string)"
+    :to="homePage ?? (runtimeConfig.public.MAIN_WEBSITE as string)"
   >
     <IconBrand />
     <p v-if="mode === 'full'">Holy Tweaks</p>

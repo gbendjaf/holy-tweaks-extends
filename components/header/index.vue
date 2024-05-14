@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Props {
   navigation: Array<NavigationSimple | NavigationSubMenu>,
-  ctaBtn: NavigationPrimary
+  ctaBtn: HeaderCtaBtn
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -12,7 +12,30 @@ const props = withDefaults(defineProps<Props>(), {
   <header>
     <nav class="ht-l-header-container">
       <HeaderBrandLink />
-      <slot />
+      <div class="ht-l-flex-navigation">
+        <div
+          v-for="(el, index) in navigation"
+          :key="`navigation-${index}`"
+        >
+          <NavigationSimple
+            v-if="'routes' in el === false"
+            :to="el.to"
+            :name="el.name"
+          />
+          <NavigationSubMenu
+            v-else
+            :title="el.title"
+            :routes="el.routes"
+          />
+        </div>
+      </div>
+      <NavigationPrimary
+        :link="ctaBtn.link"
+        :size="ctaBtn.size"
+        :target="ctaBtn.target"
+      >
+        <p>{{ ctaBtn.caption }}</p>
+      </NavigationPrimary>
     </nav>
   </header>
 </template>
@@ -37,5 +60,10 @@ header {
   @media only screen and (min-width: 768px) {
     padding: 0 34px;
   }
+}
+.ht-l-flex-navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 </style>

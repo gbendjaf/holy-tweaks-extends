@@ -72,6 +72,7 @@ ul {
 li {
   @include action-large;
   cursor: pointer;
+  width: 100%;
   & svg {
     width: 16px;
     height: 16px;

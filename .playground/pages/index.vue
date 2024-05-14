@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import ModalDummy from '@/components/modal/Dummy.vue'
-import { IconAbacusBold } from '#components'
 import { ref } from 'vue'
 
 const inputText = ref('')

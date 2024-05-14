@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import type { RouteLocationRaw } from '#vue-router'
 
 interface Props {
   pagesDirectory: Array<{
     title: string,
     pages: Array<{ link: string, name: string }>
-  }>
+  }>,
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -67,30 +68,48 @@ const props = withDefaults(defineProps<Props>(), {
   ]
 })
 
-const runtimeConfig = useRuntimeConfig()
+function useSocials () {
+  const socialLinks = computed<Array<{ component: any, link: string, alt: string }>>(() => {
+    return [
+      {
+        component: resolveComponent('IconDiscord'),
+        link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).DISCORD,
+        alt: 'Our Discord server'
+      },
+      {
+        component: resolveComponent('IconTwitter'),
+        link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).TWITTER,
+        alt: 'Our Twitter'
+      },
+      {
+        component: resolveComponent('IconYouTube'),
+        link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).YOUTUBE,
+        alt: 'Our YouTube channel'
+      },
+      {
+        component: resolveComponent('IconTikTok'),
+        link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).TIKTOK,
+        alt: 'Our TikTok'
+      }
+    ]
+  })
 
-const socialLinks: Array<{ component: any, link: string, alt: string }> = [
-  {
-    component: resolveComponent('IconDiscord'),
-    link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).DISCORD,
-    alt: 'Our Discord server'
-  },
-  {
-    component: resolveComponent('IconTwitter'),
-    link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).TWITTER,
-    alt: 'Our Twitter'
-  },
-  {
-    component: resolveComponent('IconYouTube'),
-    link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).YOUTUBE,
-    alt: 'Our YouTube channel'
-  },
-  {
-    component: resolveComponent('IconTikTok'),
-    link: (runtimeConfig.public.SOCIAL_LINKS as Record<string, string>).TIKTOK,
-    alt: 'Our TikTok'
+  return {
+    socialLinks
   }
-]
+}
+
+function useInject () {
+  const homePage = inject('home-page', undefined)
+
+  return {
+    homePage
+  }
+}
+
+const { socialLinks } = useSocials()
+const { homePage } = useInject()
+const runtimeConfig = useRuntimeConfig()
 </script>
 
 <template>
@@ -99,7 +118,7 @@ const socialLinks: Array<{ component: any, link: string, alt: string }> = [
       <div class="ht-c-footer-brand">
         <NuxtLink
           class="ht-c-footer-brand__link"
-          :to="(runtimeConfig.public.MAIN_WEBSITE as string)"
+          :to="homePage ?? (runtimeConfig.public.MAIN_WEBSITE as string)"
         >
           <IconBrand />
           <p>Holy Tweaks Software</p>
