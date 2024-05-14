@@ -3,6 +3,9 @@ interface Props {
   navigation: Array<NavigationSimple | NavigationSubMenu>,
   ctaBtn: NavigationPrimary
 }
+
+const props = withDefaults(defineProps<Props>(), {
+})
 </script>
 
 <template>
