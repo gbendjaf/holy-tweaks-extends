@@ -6,13 +6,23 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
 })
+
+function useBurgerMenu () {
+  const isMenuOpen = ref<boolean>(false)
+
+  return {
+    isMenuOpen
+  }
+}
+
+const { isMenuOpen } = useBurgerMenu()
 </script>
 
 <template>
   <header>
     <nav class="ht-l-header-container">
       <HeaderBrandLink />
-      <div class="ht-l-flex-navigation">
+      <div class="ht-c-desktop-navigation">
         <div
           v-for="(el, index) in navigation"
           :key="`navigation-${index}`"
@@ -29,13 +39,19 @@ const props = withDefaults(defineProps<Props>(), {
           />
         </div>
       </div>
-      <NavigationPrimary
-        :link="ctaBtn.link"
-        :size="ctaBtn.size"
-        :target="ctaBtn.target"
-      >
-        <p>{{ ctaBtn.caption }}</p>
-      </NavigationPrimary>
+      <div class="ht-l-mobile-actions">
+        <NavigationPrimary
+          :link="ctaBtn.link"
+          :size="ctaBtn.size"
+          :target="ctaBtn.target"
+        >
+          <p>{{ ctaBtn.caption }}</p>
+        </NavigationPrimary>
+        <HeaderBurger
+          class="ht-c-burger"
+          v-model="isMenuOpen"
+        />
+      </div>
     </nav>
   </header>
 </template>
@@ -61,9 +77,22 @@ header {
     padding: 0 34px;
   }
 }
-.ht-l-flex-navigation {
+.ht-c-desktop-navigation {
+  display: none;
+  @media only screen and (min-width: 1064px) {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+}
+.ht-c-burger {
+  @media only screen and (min-width: 1064px) {
+    display: none;
+  }
+}
+.ht-l-mobile-actions {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 }
 </style>
