@@ -21,8 +21,6 @@ defineEmits(['update:modelValue'])
 </template>
 
 <style scoped lang="scss">
-$default-bezier: cubic-bezier(.4,0,.2,1);
-
 .ht-c-burger {
 	background-color: transparent;
   border: none;

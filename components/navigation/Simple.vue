@@ -30,15 +30,14 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
+  border-radius: 3px;
   p {    
     @include action-large;
     line-height: 20px;
   }
   @media only screen and (min-width: 1064px) {
-    &:not(.router-link-active):hover {
-      p, svg {
-        color: $grey-60;
-      }
+    &:hover {
+      background-color: $alpha-white-8;
     }
   }
 }

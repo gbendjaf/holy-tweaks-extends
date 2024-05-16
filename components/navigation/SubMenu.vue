@@ -62,7 +62,8 @@ ul {
   position: absolute;
   top: 100%;
   left: -14px;
-  width: 150px;
+  width: max-content;
+  min-width: 150px;
   padding: 7px;
   border-radius: 3px;
   list-style: none;
@@ -74,9 +75,8 @@ li {
   cursor: pointer;
   width: 100%;
   & svg {
-    width: 16px;
-    height: 16px;
-    color: $grey-80;
+    width: 20px;
+    height: 20px;
   }
   & a {
     padding: 8px 7px;
