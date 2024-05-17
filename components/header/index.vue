@@ -10,18 +10,26 @@ const props = withDefaults(defineProps<Props>(), {
 function useBurgerMenu () {
   const isMenuOpen = ref<boolean>(false)
 
+  watch(
+    () => route.path,
+    () => {
+      isMenuOpen.value = false
+    }, { flush: 'post', deep: true}
+  )
+
   return {
     isMenuOpen
   }
 }
 
+const route = useRoute()
 const { isMenuOpen } = useBurgerMenu()
 </script>
 
 <template>
   <header class="ht-c-header">
     <nav class="ht-c-header__nav-container">
-      <HeaderBrandLink />
+      <HeaderBrandLink/>
       <div class="ht-c-desktop-navigation">
         <div
           v-for="(el, index) in navigation"
@@ -69,7 +77,6 @@ const { isMenuOpen } = useBurgerMenu()
               v-for="(path, i) in el.routes"
               :key="`nav-${index}-${i}`"
               :to="path.to"
-              @click="isMenuOpen = false"
             >
               {{ path.name }}
             </NuxtLink>
@@ -77,7 +84,6 @@ const { isMenuOpen } = useBurgerMenu()
           <div v-else>
             <NuxtLink
               :to="el.to"
-              @click="isMenuOpen = false"
             >
               {{ el.name }}
             </NuxtLink>
