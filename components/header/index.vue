@@ -97,9 +97,8 @@ const { isMenuOpen } = useBurgerMenu()
   background-color: rgba($bg-page, 0.6);
   backdrop-filter: blur(10px);
   &__nav-container {
-    padding: 0 24px;
+    padding: 0 18px;
     border-bottom: 1px solid $grey-40;
-    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -112,12 +111,13 @@ const { isMenuOpen } = useBurgerMenu()
   }
   @media only screen and (min-width: 768px) {
     &__nav-container {
-      padding: 0 34px;
+      padding: 0 32px;
     }
   }
   @media only screen and (min-width: 1024px) {
     border-bottom: 1px solid $grey-40;
     &__nav-container {
+      max-width: 1364px;
       border: none;
     }
   }

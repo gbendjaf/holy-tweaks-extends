@@ -165,7 +165,7 @@ const runtimeConfig = useRuntimeConfig()
 .ht-l-footer-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1250px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 .ht-c-footer-brand {
@@ -251,8 +251,11 @@ const runtimeConfig = useRuntimeConfig()
   }
 }
 footer {
-  padding: 50px 24px;
+  padding: 50px 18px;
   background-color: $bg-page;
   border-top: 1px solid $grey-40;
+  @media only screen and (min-width: 768px) {
+    padding: 50px 32px;
+  }
 }
 </style>
