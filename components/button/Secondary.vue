@@ -63,10 +63,10 @@ const props = withDefaults(defineProps<Props>(), {
     }
   }
   &.--large {
+    padding: 8px 12px;
     p {
       @include action-large;
     }
-    padding: 8px 12px;
   }
   &.--is-loading {
     svg {
