@@ -2,19 +2,21 @@
 import type { RouteLocationRaw } from '#vue-router'
 
 interface Props {
-  withIcon?: boolean,
   to: RouteLocationRaw,
+  withIcon?: boolean,
+  target?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   withIcon: true,
+  target: '_blank'
 })
 </script>
 
 <template>
   <NuxtLink
     :to="props.to"
-    target="_blank"
+    :target="target"
   >
     <slot>
       External Link
