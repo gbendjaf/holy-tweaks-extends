@@ -52,7 +52,7 @@ function emitChange (event: Event): void {
 	@include action-medium;
   width: 100%;
 	min-height: 100px;
-	max-height: 600px;
+	max-height: 450px;
   resize: vertical;
   background-color: transparent;
   outline: none;
