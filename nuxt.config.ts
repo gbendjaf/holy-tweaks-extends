@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       type: process.env.NUXT_SITE_IDENTITY ?? 'Organization'
     },
     twitter: process.env.NUXT_SITE_TWITTER_TAG ?? '@HolyTweaks',
-    indexable: process.env.NUXT_SITE_INDEXABLE ?? true,
+    indexable: process.env.NUXT_SITE_INDEXABLE ?? false,
   },
   i18n: {
     baseUrl: process.env.NUXT_SITE_URL ?? 'https://www.holytweaks.com',
