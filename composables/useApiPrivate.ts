@@ -4,7 +4,7 @@ export default function () {
   const { accessToken, memoizedRenewTokens } = useTokens()
 
   const fetcher = $fetch.create({
-    baseURL: config.public.API_URL,
+    baseURL: config.public.API_URL as string,
 		retry: 1,
 		retryStatusCodes: [401],
     async onRequest({options}) {
