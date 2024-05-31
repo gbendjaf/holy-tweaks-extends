@@ -36,10 +36,9 @@ const { isSelected } = useRadioState()
         type="radio"
         @change="emit('update:modelValue', index)"
       >
-      <IconDotCircleBold v-if="isSelected"/>
+      <IconDotCircleBold v-if="isSelected" />
     </div>
-    <slot>
-    </slot>
+    <slot />
   </label>
 </template>
 
@@ -56,7 +55,7 @@ const { isSelected } = useRadioState()
     min-height: 20px;
     max-width: 20px;
     max-height: 20px;
-    background-color: transparent;
+    background-color: $grey-15;
     border-radius: 100%;
     border: 1px solid $border-action-low;
     & svg {

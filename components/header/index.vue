@@ -53,7 +53,7 @@ const { isMenuOpen } = useBurgerMenu()
           :size="ctaBtn.size"
           :target="ctaBtn.target"
         >
-        <p>{{ ctaBtn.caption }}</p>
+          <p>{{ ctaBtn.caption }}</p>
         </NavigationPrimary>
         <HeaderBurger
           class="ht-c-burger"

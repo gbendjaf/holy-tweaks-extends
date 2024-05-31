@@ -52,7 +52,7 @@ const { close, isOpen, view, title, closable, closableFromOutside } = useModalSt
               @click="close"
             />
           </div>
-          <component :is="view"/>
+          <component :is="view" />
         </div>
       </div>
     </transition>
