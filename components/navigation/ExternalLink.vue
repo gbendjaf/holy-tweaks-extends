@@ -21,7 +21,7 @@ const props = withDefaults(defineProps<Props>(), {
     <slot>
       External Link
     </slot>
-    <IconArrowUpRightLinear v-if="withIcon"/>
+    <IconArrowUpRightLinear v-if="withIcon" />
   </NuxtLink>
 </template>
 
@@ -35,6 +35,7 @@ a {
   text-decoration-thickness: 2px;
   text-decoration-line: underline;
 	cursor: pointer;
+  color: $text-action;
   &:focus-visible {
     border: none;
     outline: none;
