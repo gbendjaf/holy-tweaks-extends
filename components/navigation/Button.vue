@@ -34,7 +34,7 @@ const { btnType, btnSize } = useClass()
     :to="link"
     :target="target"
   >
-    <slot></slot>
+    <slot />
   </NuxtLink>
 </template>
 
