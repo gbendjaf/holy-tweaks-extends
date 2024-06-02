@@ -136,7 +136,8 @@ const { isMenuOpen } = useBurgerMenu()
     gap: 32px;
   }
 }
-.ht-c-burger {
+.ht-c-burger,
+.ht-c-mobile-nav-menu {
   @media only screen and (min-width: 1064px) {
     display: none;
   }
