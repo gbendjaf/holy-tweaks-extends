@@ -1,7 +1,11 @@
 {
+  "nuxtSiteConfig": {
+    "name": "Holy Tweaks",
+    "description": "Description de site"
+  },
   "error": {
     "resetBtn": "Retourner à la page d'accueil",
     "defaultMsg": "Oups quelque chose s'est mal passé !",
-    "closeWindow": "Tu peux fermet cette fenêtre."
+    "closeWindow": "Tu peux fermer cette fenêtre."
   }
 }

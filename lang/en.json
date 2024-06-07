@@ -1,4 +1,8 @@
 {
+  "nuxtSiteConfig": {
+    "name": "Holy Tweaks",
+    "description": "My site description"
+  },
   "error": {
     "resetBtn": "Return to homepage",
     "defaultMsg": "Oops something went wrong!",
