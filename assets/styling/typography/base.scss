@@ -1,0 +1,41 @@
+a, p, label, h1, h2, h3, h4, li {
+  color: $text-body;
+  width: fit-content;
+  text-decoration: none;
+  text-wrap: pretty;
+}
+
+h1 {
+  @include heading-medium;
+  color: $text-title;
+  @media only screen and (min-width: 768px) {
+    @include heading-large;
+  }
+}
+
+h2 {
+  @include heading-medium;
+  font-size: 32px;
+  color: $text-title;
+  @media only screen and (min-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  @include heading-small;
+  font-size: 20px;
+  color: $text-title;
+  @media only screen and (min-width: 768px) {
+    font-size: 23px;
+  }
+}
+
+p, label, li {
+  @include body-regular;
+  color: $text-body;
+}
+
+b {
+  @include body-bold;
+}

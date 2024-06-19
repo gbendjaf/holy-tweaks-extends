@@ -1,0 +1,14 @@
+.ht-c-form-error-container {
+	display: flex;
+	align-items: flex-start;
+	padding: 16px;
+	gap: 10px;
+	border: 1px solid $border-error;
+	background-color: $bg-error;
+	svg {
+		color: $text-error;
+	}
+	p {
+		line-height: 142%;
+	}
+}
