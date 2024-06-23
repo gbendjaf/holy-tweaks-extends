@@ -6,10 +6,10 @@ export default defineNuxtConfig({
       CURRENT_SUBDOMAIN: process.env.NUXT_CURRENT_SUBDOMAIN ?? 'subdomain',
       ERROR_REDIRECT: process.env.NUXT_ERROR_REDIRECT ?? '/',
       SOCIAL_LINKS: {
-        DISCORD: process.env.NUXT_DISCORD_LINK ?? 'https://discord.com/invite/Gmvwj6fEkz',
-        TWITTER: process.env.NUXT_TWITTER_LINK ?? 'https://twitter.com/HolyTweaks',
-        YOUTUBE: process.env.NUXT_YOUTUBE_LINK ?? 'https://www.youtube.com/@HolyTweaksSoftware',
-        TIKTOK: process.env.NUXT_TIKTOK_LINK ?? 'https://www.tiktok.com/@holytweaks',
+        DISCORD: 'https://discord.com/invite/Gmvwj6fEkz',
+        TWITTER: 'https://twitter.com/HolyTweaks',
+        YOUTUBE: 'https://www.youtube.com/@HolyTweaksSoftware',
+        TIKTOK: 'https://www.tiktok.com/@holytweaks',
       }
 		}
 	},
@@ -28,13 +28,10 @@ export default defineNuxtConfig({
   },
   site: {
     url: process.env.NUXT_SITE_URL ?? 'https://www.holytweaks.com',
-    name: process.env.NUXT_SITE_NAME ?? 'domain',
-    description: process.env.NUXT_SITE_DESCRIPTION ?? 'A default site description',
-    defaultLocale: process.env.NUXT_SITE_DEFAULT_LOCALE ?? 'fr',
     identity: {
-      type: process.env.NUXT_SITE_IDENTITY ?? 'Organization'
+      type: 'Organization'
     },
-    twitter: process.env.NUXT_SITE_TWITTER_TAG ?? '@HolyTweaks',
+    twitter: '@HolyTweaks',
     indexable: process.env.NUXT_SITE_INDEXABLE ?? false,
   },
   i18n: {

@@ -2,8 +2,8 @@
 import memoize from 'memoize'
 
 export default function () {
-  const accessToken = useCookie('access-token')
-  const refreshToken = useCookie('refresh-token')
+  const accessToken = useCookie('access-token', { maxAge: 60 * 10 })
+  const refreshToken = useCookie('refresh-token', { maxAge: 60 * 60 * 24 })
   
   const { fetcher: publicFetcher } = useApiPublic()
   

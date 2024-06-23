@@ -1,0 +1,138 @@
+/* HEADING */
+
+@mixin heading-large {
+  font-family: Lexend;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 100%;
+}
+
+@mixin heading-medium {
+  font-family: Lexend;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 100%;
+}
+@mixin heading-small {
+  font-family: Lexend;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 100%;
+}
+
+/* BODY */
+
+@mixin body-regular {
+  font-family: Satoshi Variable;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+@mixin body-large {
+  font-family: Satoshi Variable;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+@mixin body-bold {
+  font-family: Satoshi Variable;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+@mixin body-large-bold {
+  font-family: Satoshi Variable;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ACTION */
+
+@mixin action-large {
+  font-family: Lexend;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.64px;
+}
+
+@mixin action-medium {
+  font-family: Lexend;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.56px;
+}
+
+@mixin action-small {
+  font-family: Lexend;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.48px;
+}
+
+/* CAPTION */
+
+@mixin caption-regular {
+  font-family: Satoshi Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin caption-bold {
+  font-family: Satoshi Variable;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* INPUT */
+
+@mixin input-label {
+  font-family: Satoshi Variable;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+/* BRAND */
+
+@mixin brand-large {
+  font-family: Anton;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+}
+
+ @mixin brand-medium {
+  font-family: Anton;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: -0.96px;
+  text-transform: uppercase;
+}
+
+@mixin brand-small {
+  font-family: Anton;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
