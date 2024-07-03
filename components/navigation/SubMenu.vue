@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import type { RouteLocationRaw } from '#vue-router'
+
 interface Props {
   title: string
   routes: Array<{
-    to: any | string,
+    to: RouteLocationRaw,
     name: string,
     icon?: any
   }>,
@@ -46,7 +48,7 @@ const props = withDefaults(defineProps<Props>(), {
 button {
   all: unset;
   @include action-large;
-  color: $text-body;
+  color: $grey-80;
   display: flex;
   align-items: center;
   gap: 5px;

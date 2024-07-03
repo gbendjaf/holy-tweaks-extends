@@ -29,15 +29,22 @@ a {
   padding: 8px 12px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   border-radius: 3px;
+  color: $grey-80;
   p {    
     @include action-large;
     line-height: 20px;
+    color: $grey-80;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
   }
   @media only screen and (min-width: 1064px) {
-    &:hover {
-      background-color: $alpha-white-8;
+    &:hover,
+    &:hover p {
+      color: $text-body;
     }
   }
 }
