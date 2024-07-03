@@ -39,5 +39,5 @@ const { btnType, btnSize } = useClass()
 </template>
 
 <style lang="scss">
-@import '@/assets/styling/components/buttons.scss';
+@import 'assets/styling/components/buttons.scss';
 </style>

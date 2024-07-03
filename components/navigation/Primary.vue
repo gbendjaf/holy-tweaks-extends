@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
 </template>
 
 <style lang="scss">
-@import '@/assets/styling/components/buttons.scss';
+@import 'assets/styling/components/buttons.scss';
 .ht-c-link-primary {
 
 }
