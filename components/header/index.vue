@@ -39,6 +39,8 @@ const { isMenuOpen } = useBurgerMenu()
             v-if="'routes' in el === false"
             :to="el.to"
             :name="el.name"
+            :icon="el.icon"
+            :open-new-page="el.openNewPage"
           />
           <NavigationSubMenu
             v-else
@@ -56,8 +58,8 @@ const { isMenuOpen } = useBurgerMenu()
           <p>{{ ctaBtn.caption }}</p>
         </NavigationPrimary>
         <HeaderBurger
-          class="ht-c-burger"
           v-model="isMenuOpen"
+          class="ht-c-burger"
         />
       </div>
       <ul
